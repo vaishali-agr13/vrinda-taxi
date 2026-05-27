@@ -1,0 +1,3 @@
+#RewriteEngine On
+#RewriteRule ^(.*)$ - [R=503,L]
+#ErrorDocument 503 "Website is temporarily down for maintenance. Please check back later."
