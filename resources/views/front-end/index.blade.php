@@ -93,17 +93,7 @@
 
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('front-end/assets/img/logo/favicon.png') }}" />
-
-    <!-- css -->
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/all-fontawesome.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/animate.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/magnific-popup.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/owl.carousel.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/slimselect.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/flatpickr.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/style.css') }}" />
+  
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -166,7 +156,7 @@
 
 
     <!--===== header ==========-->
-@include('front-end.header')
+@include('front-end.layouts.header')
     <!--===== header ==========-->
 
     <main class="main">
@@ -176,17 +166,22 @@
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
             <!-- Indicators/dots -->
-            <div class="carousel-indicators">
+            <!-- <div class="carousel-indicators">
                 <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
                 <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-            </div>
+            </div> -->
 
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
+                    <!-- <img src="assets/img/hero/1.png" alt="Vrinda Taxi Service" class="d-block" style="width:100%"> -->
+                    <video autoplay loop muted playsinline src="{{ asset('front-end/assets/video/banner-1.mp4') }}"></video>
+                </div>
+
+                <!-- <div class="carousel-item active">
                     <img src="{{ asset('front-end/assets/img/hero/1.png') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div>
                 <div class="carousel-item">
@@ -197,7 +192,7 @@
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('front-end/assets/img/hero/slider3.webp') }} " alt="Vrinda Taxi Service" class="d-block" style="width:100%">
-                </div>
+                </div> -->
             </div>
 
             <!-- Left and right controls/icons -->
@@ -214,24 +209,66 @@
         <div class="booking-form ng-mt">
             <div class="booking-form-wrap bkf-w">
                 <div class="shape"></div>
+
                 <h4 class="title">Book Your Ride</h4>
+
+                <small id="tripTypeError" class="text-danger d-none">
+                  Please select trip type
+                </small>
 
                 <!-- Stylish Trip Toggle -->
                 <div class="trip-toggle-wrap">
-                    <button type="button" class="trip-btn active" onclick="setTripType('Round Trip')">
-                        <i class="far fa-arrow-right-arrow-left"></i> Round Trip
-                    </button>
-                    <button type="button" class="trip-btn" onclick="setTripType('One Way')">
-                        <i class="far fa-location-dot"></i> One Way
+                    <button type="button" class="trip-btn active" onclick="setTripType(this,'round_trip')">
+                        Round Trip
                     </button>
 
-                    <button type="button" class="trip-btn" onclick="setTripType('local')">
-                        <i class="far fa-location-dot"></i> Local
+                    <button type="button" class="trip-btn" onclick="setTripType(this,'one_way')">
+                        One Way
+                    </button>
+
+                    <button type="button" class="trip-btn" onclick="setTripType(this,'local')">
+                        Local
                     </button>
                 </div>
 
-                <form onsubmit="event.preventDefault(); calculateDistanceAndRedirect();">
+                <form method="POST" action="{{ route('booking.calculate') }}" onsubmit="return calculateDistanceBeforeSubmit(event)">
+                    @csrf
+
+                    <input type="hidden" name="trip_type" id="tripType" value="">
+                    <input type="hidden" name="distance_km" id="distanceKm">
+
                     <div class="row g-3">
+
+                        <!-- Name -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <div class="form-icon">
+                                    <i class="far fa-user"></i>
+                                    <input type="text"
+                                        class="form-control"
+                                        name="name"
+                                        placeholder="Enter Your Name"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile -->
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="form-label">Mobile Number</label>
+                                <div class="form-icon">
+                                    <i class="far fa-phone"></i>
+                                    <input type="tel"
+                                        class="form-control"
+                                        name="phone"
+                                        placeholder="Enter Mobile Number"
+                                        maxlength="10"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Pickup -->
                         <div class="col-lg-3">
@@ -239,7 +276,12 @@
                                 <label for="pickup" class="form-label">Pick Up Location</label>
                                 <div class="form-icon">
                                     <i class="far fa-location-dot"></i>
-                                    <input type="text" class="form-control" id="pickup" placeholder="Pick Up Location" required>
+                                    <input type="text"
+                                        class="form-control"
+                                        name="pickup_location"
+                                        id="pickup"
+                                        placeholder="Pick Up Location"
+                                        required>
                                 </div>
                             </div>
                         </div>
@@ -247,10 +289,15 @@
                         <!-- Drop -->
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <label for="pickup" class="form-label">Drop off Location</label>
+                                <label for="drop" class="form-label">Drop off Location</label>
                                 <div class="form-icon">
                                     <i class="far fa-location-dot"></i>
-                                    <input type="text" class="form-control" id="drop" placeholder="Drop Off Location" required>
+                                    <input type="text"
+                                        class="form-control"
+                                        name="drop_location"
+                                        id="drop"
+                                        placeholder="Drop Off Location"
+                                        required>
                                 </div>
                             </div>
                         </div>
@@ -258,29 +305,33 @@
                         <!-- Pickup Date -->
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <label for="pickup" class="form-label">Pick Up Date</label>
+                                <label class="form-label">Pick Up Date</label>
                                 <div class="form-icon">
                                     <i class="far fa-calendar-range"></i>
-                                    <input type="datetime-local" class="form-control" id="pickupDate" required>
+                                    <input type="datetime-local"
+                                        name="ride_date"
+                                        class="form-control"
+                                        id="pickupDate"
+                                        required>
                                 </div>
                             </div>
                         </div>
-
-
 
                         <!-- Return -->
                         <div class="col-lg-3" id="returnDateWrapper">
                             <div class="form-group">
-                                <label for="pickup" class="form-label">Return Date</label>
+                                <label class="form-label">Return Date</label>
                                 <div class="form-icon">
                                     <i class="far fa-calendar-range"></i>
-                                    <input type="datetime-local" class="form-control" id="returnDate">
+                                    <input type="datetime-local"
+                                        name="return_date"
+                                        class="form-control"
+                                        id="returnDate">
                                 </div>
                             </div>
                         </div>
 
-                        <input type="hidden" id="tripType" value="Round Trip">
-
+                        <!-- Button -->
                         <div class="col-lg-2">
                             <button class="theme-btn w-100" type="submit">
                                 Book Car <i class="fas fa-arrow-right"></i>
@@ -433,28 +484,29 @@
                     <div class="col-lg-7 mx-auto">
                         <div class="site-heading text-center wow fadeInUp" data-wow-delay=".2s">
                             <span class="site-title-tagline"><i class="far fa-car"></i> Our Cars</span>
-                            <h3 class="site-title">Let's check our <span>cars</span></h3>
+                            <h3 class="site-title">Let's check our <span>cars----</span></h3>
                             <div class="heading-divider"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row g-3">
-                    <div class="col-md-6 col-lg-4 col-xl-3">
+                    @foreach ($cars as $car)
+                  <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="car-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="car-top">
                                 <!-- <span class="type">SUV</span> -->
                                 <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
                             </div>
                             <div class="car-img">
-                                <img src="{{ asset('front-end/assets/img/car/01.png') }}" alt="Innova Crysta" />
+                                <img src="{{ asset('public/uploads/cars/'. $car->car_image) }}" alt="Innova Crysta" />
                             </div>
                             <div class="car-content">
-                                <h4><a href="car-single.php">Innova Crysta</a></h4>
+                                <h4><a href="car-single.php">{{$car->car_name}}</a></h4>
                                 <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>Manual</li>
-                                    <li><i class="far fa-user-tie"></i>7 Traveler</li>
-                                    <li><i class="far fa-car"></i>Model: 2024</li>
-                                    <li><i class="far fa-gas-pump"></i>Diesel</li>
+                                    <li><i class="far fa-steering-wheel"></i>{{$car->transmission_type}}</li>
+                                    <li><i class="far fa-user-tie"></i>{{$car->passengers}} Traveler</li>
+                                    <li><i class="far fa-car"></i>{{$car->car_model}}</li>
+                                    <li><i class="far fa-gas-pump"></i>{{$car->fuel_type}}</li>
                                     <!-- <li><i class="far fa-road"></i>19km / litre</li> -->
                                 </ul>
                             </div>
@@ -463,183 +515,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="car-item wow fadeInUp" data-wow-delay=".4s">
-                            <div class="car-top">
-                                <!-- <span class="type">MPV</span> -->
-                                <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="car-img">
-                                <img src="{{ asset('front-end/assets/img/car/02.png') }}" alt="Ertiga" />
-                            </div>
-                            <div class="car-content">
-                                <h4><a href="car-single.php">Ertiga</a></h4>
-                                <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>Manual</li>
-                                    <li><i class="far fa-user-tie"></i>7 Traveler</li>
-                                    <li><i class="far fa-car"></i>Model: 2024</li>
-                                    <li><i class="far fa-gas-pump"></i>Petrol/CNG</li>
-                                    <!-- <li><i class="far fa-road"></i>18km / litre</li> -->
-                                </ul>
-                            </div>
-                            <div class="car-bottom">
-                                <a href="https://wa.me/919452667708" class="theme-btn"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="car-item wow fadeInUp" data-wow-delay=".6s">
-                            <div class="car-top">
-                                <!-- <span class="type">Sedan</span> -->
-                                <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="car-img">
-                                <img src="{{ asset('front-end/assets/img/car/03.png') }}" alt="Swift Dzire" />
-                            </div>
-                            <div class="car-content">
-                                <h4><a href="car-single.php">Swift Dzire</a></h4>
-                                <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>Manual</li>
-                                    <li><i class="far fa-user-tie"></i>5 Traveler</li>
-                                    <li><i class="far fa-car"></i>Model: 2024</li>
-                                    <li><i class="far fa-gas-pump"></i>Petrol/CNG</li>
-                                    <!-- <li><i class="far fa-road"></i>14km / litre</li> -->
-                                </ul>
-                            </div>
-                            <div class="car-bottom">
-                                <a href="https://wa.me/919452667708" class="theme-btn"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="car-item wow fadeInUp" data-wow-delay=".8s">
-                            <div class="car-top">
-                                <!-- <span class="type">Luxury Van</span> -->
-                                <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="car-img">
-                                <img src="{{ asset('front-end/assets/img/car/04.png') }}" alt="Urbania" />
-                            </div>
-                            <div class="car-content">
-                                <h4><a href="car-single.php">Urbania</a></h4>
-                                <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>Manual</li>
-                                    <li><i class="far fa-user-tie"></i>10-17 Traveler</li>
-                                    <li><i class="far fa-car"></i>Model: 2025</li>
-                                    <li><i class="far fa-gas-pump"></i>Diesel</li>
-                                    <!-- <li><i class="far fa-road"></i>35km / litre</li> -->
-                                </ul>
-                            </div>
-                            <div class="car-bottom">
-                                <a href="https://wa.me/919452667708" class="theme-btn"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="car-item wow fadeInUp" data-wow-delay="1s">
-                            <div class="car-top">
-                                <!-- <span class="type">Traveller</span> -->
-                                <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="car-img">
-                                <img src="{{ asset('front-end/assets/img/car/05.png') }}" alt="Tempo Traveller" />
-                            </div>
-                            <div class="car-content">
-                                <h4><a href="car-single.php">Tempo Traveller</a></h4>
-                                <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>Manual</li>
-                                    <li><i class="far fa-user-tie"></i>12-26 Traveler</li>
-                                    <li><i class="far fa-car"></i>Model: 2024</li>
-                                    <li><i class="far fa-gas-pump"></i>Diesel</li>
-                                    <!-- <li><i class="far fa-road"></i>30km / litre</li> -->
-                                </ul>
-                            </div>
-                            <div class="car-bottom">
-                                <a href="https://wa.me/919452667708" class="theme-btn"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="car-item wow fadeInUp" data-wow-delay="1s">
-                            <div class="car-top">
-                                <!-- <span class="type">Traveller</span> -->
-                                <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="car-img">
-                                <img src="{{ asset('front-end/assets/img/car/06.png') }}" alt="Tempo Traveller" />
-                            </div>
-                            <div class="car-content">
-                                <h4><a href="car-single.php">Baleno</a></h4>
-                                <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>Manual</li>
-                                    <li><i class="far fa-user-tie"></i>12-26 Traveler</li>
-                                    <li><i class="far fa-car"></i>Model: 2024</li>
-                                    <li><i class="far fa-gas-pump"></i>Petrol</li>
-                                    <!-- <li><i class="far fa-road"></i>14km / litre</li> -->
-                                </ul>
-                            </div>
-                            <div class="car-bottom">
-                                <a href="https://wa.me/919452667708" class="theme-btn"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="car-item wow fadeInUp" data-wow-delay="1s">
-                            <div class="car-top">
-                                <!-- <span class="type">Traveller</span> -->
-                                <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="car-img">
-                                <img src="{{ asset('front-end/assets/img/car/07.png') }}" alt="Tempo Traveller" />
-                            </div>
-                            <div class="car-content">
-                                <h4><a href="car-single.php">Kia Karens</a></h4>
-                                <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>Manual</li>
-                                    <li><i class="far fa-user-tie"></i>12-26 Traveler</li>
-                                    <li><i class="far fa-car"></i>Model: 2024</li>
-                                    <li><i class="far fa-gas-pump"></i>Diesel</li>
-                                    <!-- <li><i class="far fa-road"></i>16km / litre</li> -->
-                                </ul>
-                            </div>
-                            <div class="car-bottom">
-                                <a href="https://wa.me/919452667708" class="theme-btn"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="car-item wow fadeInUp" data-wow-delay="1s">
-                            <div class="car-top">
-                                <!-- <span class="type">Traveller</span> -->
-                                <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="car-img">
-                                <img src="{{ asset('front-end/assets/img/car/08.png') }}" alt="Tempo Traveller" />
-                            </div>
-                            <div class="car-content">
-                                <h4><a href="car-single.php">Force Cruiser</a></h4>
-                                <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>Manual</li>
-                                    <li><i class="far fa-user-tie"></i>9-15 Traveler</li>
-                                    <li><i class="far fa-car"></i>Model: 2024</li>
-                                    <li><i class="far fa-gas-pump"></i>Diesel</li>
-                                    <!-- <li><i class="far fa-road"></i>28km / litre</li> -->
-                                </ul>
-                            </div>
-                            <div class="car-bottom">
-                                <a href="https://wa.me/919452667708" class="theme-btn"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach
+                
                 </div>
                 <!-- <div class="col-12 text-center mt-5 wow fadeInUp">
                         <a href="#" class="theme-btn"><span class="fas fa-rotate"></span>Load More</a>
@@ -1469,7 +1346,7 @@
         <!-- cta-area -->
         <div class="cta-area pt-120">
             <div class="container">
-                <div class="cta-wrap wow fadeInUp" data-wow-delay=".2s" style="background-image: url(assets/img/cta/01.jpg)">
+                <div class="cta-wrap wow fadeInUp" data-wow-delay=".2s" style="background-image: url('{{ asset('front-end/assets/img/cta/01.jpg') }}')">
                     <div class="row align-items-center">
                         <div class="col-lg-7 text-center text-lg-start">
                             <div class="cta-text cta-divider">
@@ -1496,7 +1373,7 @@
 
         <!-- video-area -->
         <div class="video-area pt-120">
-            <div class="video-content" style="background-image: url(assets/img/video/01.jpg)">
+            <div class="video-content" style="background-image: url('{{ asset('front-end/assets/img/video/01.jpg') }}')">
                 <div class="video-wrap">
                     <a class="play-btn popup-youtube" href="#">
                         <i class="fas fa-play"></i>
@@ -2076,27 +1953,51 @@
 
 
 <script>
-        function setTripType(type) {
+        // function setTripType(type) {
+        //     alert(type);
+        //     document.getElementById("tripType").value = type;
 
-            document.getElementById("tripType").value = type;
+        //     document.querySelectorAll('.trip-btn').forEach(btn => {
+        //         btn.classList.toggle('active', btn.textContent.includes(type));
+        //     });
 
-            document.querySelectorAll('.trip-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.includes(type));
-            });
+        //     const wrapper = document.getElementById("returnDateWrapper");
+        //     const returnInput = document.getElementById("returnDate");
 
-            const wrapper = document.getElementById("returnDateWrapper");
-            const returnInput = document.getElementById("returnDate");
+        //     if (type === "round_trip") {
+        //         wrapper.style.display = "block";
+        //         returnInput.setAttribute("required", "required");
+        //     } else {
+        //         wrapper.style.display = "none";
+        //         returnInput.removeAttribute("required");
+        //         returnInput.value = "";
+        //     }
+        // }
+            function setTripType(el, type) {
+                console.log("Clicked:", el, type);
 
-            if (type === "Round Trip") {
-                wrapper.style.display = "block";
-                returnInput.setAttribute("required", "required");
-            } else {
-                wrapper.style.display = "none";
-                returnInput.removeAttribute("required");
-                returnInput.value = "";
+                document.getElementById("tripType").value = type;
+
+                document.querySelectorAll('.trip-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                if (el && el.classList) {
+                    el.classList.add('active');
+                }
+
+                const wrapper = document.getElementById("returnDateWrapper");
+                const returnInput = document.getElementById("returnDate");
+
+                if (type === "round_trip") {
+                    wrapper.style.display = "block";
+                    returnInput.setAttribute("required", "required");
+                } else {
+                    wrapper.style.display = "none";
+                    returnInput.removeAttribute("required");
+                    returnInput.value = "";
+                }
             }
-        }
-
 
 
         function disablePastDates() {
@@ -2112,7 +2013,8 @@
 
 
 
-        function calculateDistanceAndRedirect() {
+            function calculateDistanceBeforeSubmit(event) {
+            event.preventDefault();
 
             const pickup = document.getElementById("pickup").value.trim();
             const drop = document.getElementById("drop").value.trim();
@@ -2120,14 +2022,27 @@
             const returnDate = document.getElementById("returnDate").value;
             const trip = document.getElementById("tripType").value;
 
+            if(trip == '' || trip=='undefined')
+            {
+                event.preventDefault();
+
+                document.getElementById('tripTypeError')
+                        .classList.remove('d-none');
+
+                return false;
+            }
+            
+
+            document.getElementById('tripTypeError').classList.add('d-none');
+
             if (!pickup || !drop || !pickupDate) {
                 alert("Please fill all required fields.");
-                return;
+                return false;
             }
 
-            if (trip === "Round Trip" && !returnDate) {
+            if (trip === "round_trip" && !returnDate) {
                 alert("Please select return date.");
-                return;
+                return false;
             }
 
             const service = new google.maps.DistanceMatrixService();
@@ -2140,35 +2055,55 @@
             }, function(response, status) {
 
                 if (status !== "OK") {
-                    alert("Distance calculation failed. Try again.");
+                    alert("Distance calculation failed.");
                     return;
                 }
 
                 const element = response.rows[0].elements[0];
 
                 if (element.status !== "OK") {
-                    alert("Invalid pickup or drop location.");
+                    alert("Invalid location.");
                     return;
                 }
 
                 const distanceKm = (element.distance.value / 1000).toFixed(2);
 
-                let url = `car-list.php?pickup=${encodeURIComponent(pickup)}
-        &drop=${encodeURIComponent(drop)}
-        &km=${distanceKm}
-        &trip=${encodeURIComponent(trip)}
-        &pickupDate=${pickupDate}`;
+                document.getElementById("distanceKm").value = distanceKm;
 
-                if (trip === "Round Trip") {
-                    url += `&returnDate=${returnDate}`;
+                // ADD pickup/drop/date into hidden fields dynamically
+                const form = event.target;
+
+                let input1 = document.createElement("input");
+                input1.type = "hidden";
+                input1.name = "pickup_location";
+                input1.value = pickup;
+                form.appendChild(input1);
+
+                let input2 = document.createElement("input");
+                input2.type = "hidden";
+                input2.name = "drop_location";
+                input2.value = drop;
+                form.appendChild(input2);
+
+                let input3 = document.createElement("input");
+                input3.name = "ride_date";
+                input3.type = "hidden";
+                input3.value = pickupDate;
+                form.appendChild(input3);
+
+                if (trip === "round_trip") {
+                    let input4 = document.createElement("input");
+                    input4.name = "return_date";
+                    input4.type = "hidden";
+                    input4.value = returnDate;
+                    form.appendChild(input4);
                 }
 
-                window.location.href = url;
+                form.submit();
             });
+
+            return false;
         }
-
-
-
         function initMap() {
 
             const pickupInput = document.getElementById("pickup");
@@ -2186,7 +2121,7 @@
 
 
         window.addEventListener("load", function() {
-            setTripType("Round Trip");
+            setTripType("round_trip");
             disablePastDates();
         });
 
@@ -2196,7 +2131,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSD4WISok0dBzVQ4IR_CMicIT_TsKUQvI&libraries=places&callback=initMap" async defer></script>
 
     <!--======== footer =========-->
-    @include('front-end.footer')
+    @include('front-end.layouts.footer')
 
     <!--======== footer =========-->
 

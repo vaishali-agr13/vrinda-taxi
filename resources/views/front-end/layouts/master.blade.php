@@ -10,11 +10,11 @@
 
 <body>
 
-@include('frontend.layouts.header')
+@include('front-end.layouts.header')
 
 @yield('content')
 
-@include('frontend.layouts.footer')
+@include('front-end.layouts.footer')
 
 </body>
 </html>

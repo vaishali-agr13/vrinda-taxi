@@ -56,7 +56,31 @@
 
                         <i class="nav-icon fas fa-book"></i>
 
-                        <p>Bookings</p>
+                        <p>Ride Bookings</p>
+
+                    </a>
+
+                </li>
+
+                 <li class="nav-item">
+
+                    <a href="{{ url('/admin/cars') }}" class="nav-link">
+
+                        <i class="nav-icon fas fa-book"></i>
+
+                        <p>Car</p>
+
+                    </a>
+
+                </li>
+
+                  <li class="nav-item">
+
+                    <a href="{{ url('/admin/tour-packages') }}" class="nav-link">
+
+                        <i class="nav-icon fas fa-book"></i>
+
+                        <p>Tour Packages</p>
 
                     </a>
 
