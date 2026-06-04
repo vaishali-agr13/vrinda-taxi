@@ -26,7 +26,7 @@
 
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
 
                     <a href="{{ url('admin/packages') }}" class="nav-link">
 
@@ -36,9 +36,9 @@
 
                     </a>
 
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
 
                     <a href="{{ url('admin/testimonials') }}" class="nav-link">
 
@@ -48,7 +48,7 @@
 
                     </a>
 
-                </li>
+                </li> -->
 
                 <li class="nav-item">
 
@@ -57,6 +57,18 @@
                         <i class="nav-icon fas fa-book"></i>
 
                         <p>Ride Bookings</p>
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a href="{{ url('/admin/tour-packages') }}" class="nav-link">
+
+                        <i class="nav-icon fas fa-book"></i>
+
+                        <p>Tour Packages</p>
 
                     </a>
 
@@ -74,17 +86,13 @@
 
                 </li>
 
-                  <li class="nav-item">
-
-                    <a href="{{ url('/admin/tour-packages') }}" class="nav-link">
-
-                        <i class="nav-icon fas fa-book"></i>
-
-                        <p>Tour Packages</p>
-
+                <li class="nav-item">
+                    <a href="{{ route('admin.profile.edit') }}" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>My Profile</p>
                     </a>
-
                 </li>
+
 
             </ul>
 

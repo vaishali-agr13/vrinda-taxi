@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
+use App\Models\TourPackage;
+
 
 class BookingController extends Controller
 {
@@ -84,8 +86,10 @@ class BookingController extends Controller
     public function success($id)
         {
             $booking = Booking::find($id);
+            $tourPackages = TourPackage::get();
 
-            return view('front-end.success', compact('booking'));
+
+            return view('front-end.success', compact('booking','tourPackages'));
 
         }
 
@@ -107,4 +111,29 @@ class BookingController extends Controller
 
         return back()->with('success', 'Status Updated');
     }
+
+    public function sendWhatsApp($id)
+        {
+            $booking = Booking::find($id);
+
+            $phone = '919452667708'; // Admin/customer WhatsApp number
+
+            $message = "🚖 New Booking Details\n\n";
+
+            $message .= "Name: {$booking->name}\n";
+            $message .= "Phone: {$booking->phone}\n";
+            $message .= "Trip Type: {$booking->trip_type}\n";
+            $message .= "Pickup: {$booking->pickup_location}\n";
+            $message .= "Drop: {$booking->drop_location}\n";
+            $message .= "Ride Date: {$booking->ride_date}\n";
+
+            if ($booking->trip_type == 'round_trip') {
+                $message .= "Return Date: {$booking->return_date}\n";
+            }
+
+
+            $url = "https://wa.me/".$phone."?text=".urlencode($message);
+
+            return redirect($url);
+        }
 }

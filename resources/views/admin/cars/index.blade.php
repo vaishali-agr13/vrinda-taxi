@@ -7,7 +7,7 @@
     <div class="card-header d-flex justify-content-between align-items-center">
         <h3 class="card-title">Cars List</h3>
 
-        <a href="{{ route('cars.create') }}" class="btn btn-primary">
+        <a href="{{ route('cars.create') }}" class="btn btn-primary ml-auto">
             Add Car
         </a>
     </div>
@@ -36,8 +36,7 @@
 
     <div class="card-body table-responsive p-0">
 
-        <table class="table table-bordered table-hover text-nowrap">
-
+        <table class="table table-bordered table-striped table-hover text-nowrap">
             <thead>
                 <tr>
                     <th>ID</th>

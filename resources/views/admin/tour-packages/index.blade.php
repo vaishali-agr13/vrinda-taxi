@@ -2,55 +2,26 @@
 
 @section('content')
 
-<div class="content-wrapper">
+<div class="row mb-3">
+    <div class="col-md-6">
+        <h1>Tour Packages</h1>
+    </div>
 
-    {{-- Content Header --}}
-    <section class="content-header">
+    <div class="col-md-6 text-right">
+        <a href="{{ route('tour-packages.create') }}"
+           class="btn btn-primary">
+            Add New Package
+        </a>
+    </div>
+</div>
 
-        <div class="container-fluid">
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">All Tour Packages</h3>
+    </div>
 
-            <div class="row mb-2">
-
-                <div class="col-sm-6">
-                    <h1>Tour Packages</h1>
-                </div>
-
-                <div class="col-sm-6 text-right">
-
-                    <a href="{{ route('tour-packages.create') }}"
-                       class="btn btn-primary">
-
-                        Add New Package
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    {{-- Main Content --}}
-    <section class="content">
-
-        <div class="container-fluid">
-
-            <div class="card">
-
-                <div class="card-header">
-
-                    <h3 class="card-title">
-                        All Tour Packages
-                    </h3>
-
-                </div>
-
-                <div class="card-body table-responsive">
-
-                    <table class="table table-bordered table-striped">
+    <div class="card-body table-responsive">
+        <table class="table table-bordered table-striped">
 
                         <thead>
 
@@ -160,16 +131,8 @@
 
                         </tbody>
 
-                    </table>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
+        </table>
+    </div>
 </div>
 
 @endsection

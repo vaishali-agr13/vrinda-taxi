@@ -21,6 +21,10 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware('admin.auth')->group(function () {
 
+            Route::get('/profile', [AuthController::class, 'edit'])->name('admin.profile.edit');
+
+            Route::put('/profile', [AuthController::class, 'update'])->name('admin.profile.update');
+
             Route::get('/bookings', [BookingController::class, 'index'])->name('admin.bookings');
             
             Route::get('/bookings/{id}', [BookingController::class, 'show'])->name('admin.bookings.show');
@@ -51,7 +55,10 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::post('/booking/calculate', [BookingController::class, 'calculate'])->name('booking.calculate');
+
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/booking/{id}/whatsapp', [BookingController::class, 'sendWhatsApp'])->name('booking.whatsapp');
 
 Route::get('/tour-package/{id}', [TourPackageController::class, 'show'])->name('tour-packages.show');
 

@@ -1,40 +1,28 @@
 @extends('admin.layouts.master')
 
+@section('page_header')
+<div class="row">
+    <div class="col-sm-6">
+        <h1>Edit Car</h1>
+    </div>
+
+    <div class="col-sm-6 text-right">
+        <a href="{{ route('cars.index') }}" class="btn btn-secondary">
+            Back
+        </a>
+    </div>
+</div>
+@endsection
+
 @section('content')
 
-<div class="content-wrapper">
+<div class="card card-primary">
 
-    <section class="content-header">
-        <div class="container-fluid">
+    <div class="card-header">
+        <h3 class="card-title">Update Car Details</h3>
+    </div>
 
-            <div class="row mb-2">
-
-                <div class="col-sm-6">
-                    <h1>Edit Car</h1>
-                </div>
-
-                <div class="col-sm-6 text-right">
-                    <a href="{{ route('cars.index') }}" class="btn btn-secondary">
-                        Back
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section class="content">
-
-        <div class="container-fluid">
-
-            <div class="card card-primary">
-
-                <div class="card-header">
-                    <h3 class="card-title">Update Car Details</h3>
-                </div>
-
-                <form action="{{ route('cars.update', $car->id) }}"
+     <form action="{{ route('cars.update', $car->id) }}"
                       method="POST"
                       enctype="multipart/form-data">
 
@@ -324,13 +312,7 @@
 
                     </div>
 
-                </form>
-
-            </div>
-
-        </div>
-
-    </section>
+    </form>
 
 </div>
 

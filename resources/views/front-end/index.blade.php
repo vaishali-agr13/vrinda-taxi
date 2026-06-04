@@ -701,7 +701,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -724,7 +724,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -747,7 +747,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -767,7 +767,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -790,7 +790,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -813,7 +813,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -837,7 +837,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -860,7 +860,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -884,7 +884,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -907,7 +907,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -930,7 +930,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
@@ -953,7 +953,7 @@
                                 </ul>
                                 <div class="mt-auto d-flex gap-2">
                                     <a href="tel:+919452667708" class="btn btn-dark w-50">Call</a>
-                                    <a href="https://wa.me/919452667708" class="btn btn-success w-50">WhatsApp</a>
+                                    <a href="https://wa.me/919452667708" class="btn theme-btn w-50">WhatsApp</a>
                                 </div>
                             </div>
                         </div>

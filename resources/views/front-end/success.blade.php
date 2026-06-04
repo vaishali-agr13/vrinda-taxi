@@ -43,8 +43,12 @@
                 </span>
             </p>
 
-            <a href="tel:+919999999999" class="btn btn-primary mt-3">
+            <a href="tel:+919999999999" class="btn theme-btn">
                 Call Support
+            </a>
+
+            <a href="{{ route('booking.whatsapp', $booking->id) }}" class="btn theme-btn">
+               Send on WhatsApp
             </a>
 
         </div>
