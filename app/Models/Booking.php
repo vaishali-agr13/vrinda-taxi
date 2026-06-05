@@ -15,6 +15,7 @@ class Booking extends Model
         'ride_date',
         'ride_time',
         'return_date',
+        'return_time',
         'vehicle_type',
         'trip_type',   
         'note',

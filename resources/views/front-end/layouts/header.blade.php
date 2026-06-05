@@ -169,13 +169,13 @@
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
 
 
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="package.php">Package</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Package</a></li>
 
                                 <li class="nav-item dropdown">
 
@@ -298,11 +298,11 @@
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 
 
 

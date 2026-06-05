@@ -178,8 +178,9 @@
 
                 <div class="carousel-item active">
                     <!-- <img src="assets/img/hero/1.png" alt="Vrinda Taxi Service" class="d-block" style="width:100%"> -->
-                    <video autoplay loop muted playsinline src="{{ asset('front-end/assets/video/banner-1.mp4') }}"></video>
+                    <video autoplay loop muted playsinline src="{{ asset('front-end/assets/video/banner-1.mp4') }}" style="width:100%; height:523px; object-fit:cover;"></video>
                 </div>
+
 
                 <!-- <div class="carousel-item active">
                     <img src="{{ asset('front-end/assets/img/hero/1.png') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
@@ -218,17 +219,20 @@
 
                 <!-- Stylish Trip Toggle -->
                 <div class="trip-toggle-wrap">
-                    <button type="button" class="trip-btn active" onclick="setTripType(this,'round_trip')">
-                        Round Trip
+                  
+                    <button type="button" class="trip-btn" onclick="setTripType(this,'local')">
+                        Local
                     </button>
 
                     <button type="button" class="trip-btn" onclick="setTripType(this,'one_way')">
                         One Way
                     </button>
 
-                    <button type="button" class="trip-btn" onclick="setTripType(this,'local')">
-                        Local
+                    <button type="button" class="trip-btn active" onclick="setTripType(this,'round_trip')">
+                        Round Trip
                     </button>
+
+                    
                 </div>
 
                 <form method="POST" action="{{ route('booking.calculate') }}" onsubmit="return calculateDistanceBeforeSubmit(event)">
@@ -265,6 +269,20 @@
                                         name="phone"
                                         placeholder="Enter Mobile Number"
                                         maxlength="10"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label class="form-label">Mobile Number</label>
+                                <div class="form-icon">
+                                    <i class="fa fa-envelope"></i>
+                                    <input type="email"
+                                        class="form-control"
+                                        name="email"
+                                        placeholder="Enter Email ID"
                                         required>
                                 </div>
                             </div>

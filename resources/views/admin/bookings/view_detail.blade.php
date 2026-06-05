@@ -236,7 +236,6 @@
 
                     <!-- Current Status -->
                     <div class="mb-4 text-center">
-
                         @if($booking->status == 'pending')
 
                             <span class="badge badge-warning px-4 py-2">
@@ -249,26 +248,12 @@
                                 Confirmed
                             </span>
 
-                        @elseif($booking->status == 'assigned')
-
-                            <span class="badge badge-info px-4 py-2">
-                                Assigned
-                            </span>
-
-                        @elseif($booking->status == 'completed')
-
-                            <span class="badge badge-success px-4 py-2">
-                                Completed
-                            </span>
-
                         @elseif($booking->status == 'cancelled')
 
-                            <span class="badge badge-danger px-4 py-2">
+                            <span class="badge badge-info px-4 py-2">
                                 Cancelled
                             </span>
-
                         @endif
-
                     </div>
 
                     <!-- Select Status -->
@@ -291,21 +276,10 @@
                                 Confirmed
                             </option>
 
-                            <option value="assigned"
-                                {{ $booking->status == 'assigned' ? 'selected' : '' }}>
-                                Assigned
-                            </option>
-
-                            <option value="completed"
-                                {{ $booking->status == 'completed' ? 'selected' : '' }}>
-                                Completed
-                            </option>
-
                             <option value="cancelled"
                                 {{ $booking->status == 'cancelled' ? 'selected' : '' }}>
                                 Cancelled
                             </option>
-
                         </select>
 
                     </div>

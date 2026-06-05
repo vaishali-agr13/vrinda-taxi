@@ -27,6 +27,10 @@ Route::prefix('admin')->group(function () {
 
             Route::get('/bookings', [BookingController::class, 'index'])->name('admin.bookings');
             
+            Route::get('/bookings/{id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
+
+            Route::put('/bookings/{id}', [BookingController::class, 'update'])->name('bookings.update');
+            
             Route::get('/bookings/{id}', [BookingController::class, 'show'])->name('admin.bookings.show');
 
             Route::post('/bookings/status/{id}', [BookingController::class, 'statusUpdate'])->name('admin.bookings.status');
