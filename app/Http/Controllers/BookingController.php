@@ -106,7 +106,7 @@ class BookingController extends Controller
 
     public function success($id)
         {
-            $booking = Booking::find($id);
+            $booking = Booking::findOrFail($id);
             $tourPackages = TourPackage::get();
 
 
@@ -161,7 +161,7 @@ class BookingController extends Controller
         }
     public function edit($id)
         {
-            $booking = Booking::find($id);
+            $booking = Booking::findOrFail($id);
 
             return view('admin.bookings.edit', compact('booking'));
         }
