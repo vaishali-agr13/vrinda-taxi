@@ -1,6 +1,4 @@
-@extends('admin.layouts.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div class="container-fluid">
 
@@ -16,7 +14,7 @@
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <h6>Total Bookings</h6>
-                    <h3>{{ $totalBookings }}</h3>
+                    <h3><?php echo e($totalBookings); ?></h3>
                 </div>
             </div>
         </div>
@@ -25,7 +23,7 @@
             <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                     <h6>Pending Bookings</h6>
-                    <h3>{{ $pendingBookings }}</h3>
+                    <h3><?php echo e($pendingBookings); ?></h3>
                 </div>
             </div>
         </div>
@@ -34,7 +32,7 @@
             <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
                     <h6>Confirmed Bookings</h6>
-                    <h3>{{ $confirmedBookings }}</h3>
+                    <h3><?php echo e($confirmedBookings); ?></h3>
                 </div>
             </div>
         </div>
@@ -43,7 +41,7 @@
             <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                     <h6>Cancelled Bookings</h6>
-                    <h3>{{ $cancelledBookings }}</h3>
+                    <h3><?php echo e($cancelledBookings); ?></h3>
                 </div>
             </div>
         </div>
@@ -57,7 +55,7 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h6>Total Enquiries</h6>
-                    <h3>{{ $totalContacts }}</h3>
+                    <h3><?php echo e($totalContacts); ?></h3>
                 </div>
             </div>
         </div>
@@ -66,7 +64,7 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h6>Total Packages</h6>
-                    <h3>{{ $totalPackages }}</h3>
+                    <h3><?php echo e($totalPackages); ?></h3>
                 </div>
             </div>
         </div>
@@ -93,26 +91,27 @@
                 </thead>
 
                 <tbody>
-                    @forelse($recentBookings as $booking)
+                    <?php $__empty_1 = true; $__currentLoopData = $recentBookings; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $booking): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                     <tr>
-                        <td>{{ $booking->booking_no }}</td>
-                        <td>{{ $booking->name }}</td>
-                        <td>{{ $booking->phone }}</td>
-                        <td>{{ ucfirst($booking->trip_type) }}</td>
+                        <td><?php echo e($booking->booking_no); ?></td>
+                        <td><?php echo e($booking->name); ?></td>
+                        <td><?php echo e($booking->phone); ?></td>
+                        <td><?php echo e(ucfirst($booking->trip_type)); ?></td>
                         <td>
                             <span class="badge bg-success">
-                                {{ ucfirst($booking->status) }}
+                                <?php echo e(ucfirst($booking->status)); ?>
+
                             </span>
                         </td>
-                        <td>{{ $booking->created_at->format('d M Y') }}</td>
+                        <td><?php echo e($booking->created_at->format('d M Y')); ?></td>
                     </tr>
-                    @empty
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                     <tr>
                         <td colspan="6" class="text-center">
                             No Record Found
                         </td>
                     </tr>
-                    @endforelse
+                    <?php endif; ?>
                 </tbody>
 
             </table>
@@ -122,4 +121,5 @@
 
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.layouts.master', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\laragon\www\vrinda-taxi\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>

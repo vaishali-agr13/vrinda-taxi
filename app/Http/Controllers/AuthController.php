@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
+use App\Models\Booking;
+use App\Models\User;
 use Hash;
 
 class AuthController extends Controller
@@ -93,8 +95,37 @@ class AuthController extends Controller
 
     // dashboard
     public function dashboard()
-    {
-      return view('admin.dashboard');
+      {
+        $totalBookings = Booking::count();
+
+        $pendingBookings = Booking::where('status', 'pending')->count();
+
+        $confirmedBookings = Booking::where('status', 'confirmed')->count();
+
+        $cancelledBookings = Booking::where('status', 'cancelled')->count();
+
+       // $totalUsers = User::count();
+
+        $totalContacts = class_exists(Contact::class)
+            ? Contact::count()
+            : 0;
+
+        $totalPackages = class_exists(TourPackage::class)
+            ? TourPackage::count()
+            : 0;
+
+        $recentBookings = Booking::latest()->take(10)->get();
+
+        return view('admin.dashboard', compact(
+            'totalBookings',
+            'pendingBookings',
+            'confirmedBookings',
+            'cancelledBookings',
+            'totalContacts',
+            'totalPackages',
+            'recentBookings'
+        ));
+    
     }
 
     // logout
