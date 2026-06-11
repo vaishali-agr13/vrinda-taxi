@@ -193,7 +193,11 @@ class TourPackageController extends Controller
         
     }
 
-     public function edit($id)
+    public function tourBooking(){
+
+    }
+    
+    public function edit($id)
     {
 
         if(!is_numeric($id))

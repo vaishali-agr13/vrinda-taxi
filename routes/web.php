@@ -8,6 +8,8 @@ use App\Http\Controllers\CarController;
 use App\Http\Controllers\TourPackageController;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TourManagementController;
+
 
 
 
@@ -43,8 +45,11 @@ Route::prefix('admin')->group(function () {
 
             Route::get('/tour-packages', [TourPackageController::class, 'index'])->name('tour-packages.index');
 
+            Route::get('/tour-bookings/pdf', [TourManagementController::class, 'downloadAllPdf'])->name('tour-bookings.pdf');
+            
+            Route::resource('/tour-bookings', TourManagementController::class);
 
-
+            
             Route::get('/tour-packages/create', [TourPackageController::class, 'create'])->name('tour-packages.create');
 
             Route::get('/tour-packages/edit/{id}', [TourPackageController::class, 'edit'])->name('tour-packages.edit');

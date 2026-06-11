@@ -74,6 +74,15 @@
 
                 </li>
 
+                <li class="nav-item">
+
+                    <a href="{{ route('tour-bookings.index') }}" class="nav-link">
+                      <i class="nav-icon fas fa-suitcase"></i>
+                      <p>Tour Bookings Management</p>
+                    </a>
+
+                </li>
+
                  <li class="nav-item">
 
                     <a href="{{ url('/admin/cars') }}" class="nav-link">
