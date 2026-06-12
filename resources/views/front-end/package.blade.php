@@ -67,7 +67,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p1.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p1.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">2 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -90,7 +90,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p2.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p2.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">3 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -113,7 +113,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p3.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p3.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">3 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -135,7 +135,7 @@
                     <!-- 4 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src="assets/img/package/p4.webp" class="card-img-top" alt="">
+                            <img src="front-end/assets/img/package/p4.webp" class="card-img-top" alt="">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="fw-bold">Braj 84 Kos Yatra Short Tour</h5>
                                 <p class="text-muted">Sacred Braj Bhoomi pilgrimage circuit.</p>
@@ -156,7 +156,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p5.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p5.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">1 Day</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -179,7 +179,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p6.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p6.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Same Day</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -203,7 +203,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p7.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p7.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -226,7 +226,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p9.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p9.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -250,7 +250,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p10.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p10.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -273,7 +273,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p11.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p11.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Festival</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -296,7 +296,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p12.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p12.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -319,7 +319,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="assets/img/package/p13.webp" class="card-img-top" alt="">
+                                <img src="front-end/assets/img/package/p13.webp" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">

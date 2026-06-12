@@ -13,17 +13,17 @@
     <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="front-end/assets/img/logo/favicon.png" />
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/slimselect.min.css" />
-    <link rel="stylesheet" href="assets/css/flatpickr.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="front-end/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/all-fontawesome.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/slimselect.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/style.css" />
 </head>
 
 <body>
@@ -35,7 +35,7 @@
     <!--===== header ==========-->
     <main class="main">
         <!-- breadcrumb -->
-        <div class="site-breadcrumb ng-mt" style="background: url(assets/img/breadcrumb/01.jpg)">
+        <div class="site-breadcrumb ng-mt" style="background: url(front-end/assets/img/breadcrumb/01.jpg)">
             <div class="container">
                 <h3 class="breadcrumb-title">About Us</h3>
                 <ul class="breadcrumb-menu">
@@ -58,15 +58,15 @@
                                 <div class="row g-3">
                                     <div class="col-6">
                                         <div class="img-1 mb-3">
-                                            <img src="assets/img/about/01.jpg" alt="" />
+                                            <img src="front-end/assets/img/about/01.jpg" alt="" />
                                         </div>
                                         <div class="img-3">
-                                            <img src="assets/img/about/03.jpg" alt="" />
+                                            <img src="front-end/assets/img/about/03.jpg" alt="" />
                                         </div>
                                     </div>
                                     <div class="col-6 align-self-center">
                                         <div class="img-2">
-                                            <img src="assets/img/about/02.jpg" alt="" />
+                                            <img src="front-end/assets/img/about/02.jpg" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                     <div class="col-md-7">
                                         <div class="about-item">
                                             <div class="icon">
-                                                <img src="assets/img/icon/money.svg" alt="" />
+                                                <img src="front-end/assets/img/icon/money.svg" alt="" />
                                             </div>
                                             <div class="content">
                                                 <h4>Affordable & Transparent Pricing</h4>
@@ -100,7 +100,7 @@
                                         </div>
                                         <div class="about-item">
                                             <div class="icon">
-                                                <img src="assets/img/icon/driver.svg" alt="" />
+                                                <img src="front-end/assets/img/icon/driver.svg" alt="" />
                                             </div>
                                             <div class="content">
                                                 <h4>Professional Personal Drivers</h4>
@@ -110,11 +110,11 @@
                                     </div>
                                     <div class="col-md-5">
                                         <ul class="about-list">
-                                            <li><img src="assets/img/icon/check.svg" alt="" />Comfort</li>
-                                            <li><img src="assets/img/icon/check.svg" alt="" />Automatic</li>
-                                            <li><img src="assets/img/icon/check.svg" alt="" />Remote</li>
-                                            <li><img src="assets/img/icon/check.svg" alt="" />Hybrid</li>
-                                            <li><img src="assets/img/icon/check.svg" alt="" />Wireless</li>
+                                            <li><img src="front-end/assets/img/icon/check.svg" alt="" />Comfort</li>
+                                            <li><img src="front-end/assets/img/icon/check.svg" alt="" />Automatic</li>
+                                            <li><img src="front-end/assets/img/icon/check.svg" alt="" />Remote</li>
+                                            <li><img src="front-end/assets/img/icon/check.svg" alt="" />Hybrid</li>
+                                            <li><img src="front-end/assets/img/icon/check.svg" alt="" />Wireless</li>
                                         </ul>
                                     </div>
                                 </div>

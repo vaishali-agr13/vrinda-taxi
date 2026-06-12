@@ -67,10 +67,34 @@
                         <th>City</th>
                         <th>Start Date</th>
                         <th>End Date</th>
-                        <th>Status</th>
-                        <th>Total Amount</th>
-                        <th>Balance</th>
-                        <th width="180">Action</th>
+                        <th>Enquiry Date</th>
+                        <th>Package Details</th>
+                          <th>Trip Start Date</th>
+                            <th>Trip End Date</th>
+                              <th>Pickup Location</th>
+                                <th>Pickup Time</th>
+                                  <th>Drop Location</th>
+                                    <th>Drop Time</th>
+                                      <th>No of Adults</th>
+                                        <th>Car Type</th>
+                                        <th>Car Charges</th>
+                                        <th>Car Number</th>
+                                        <th>Driver Name </th>
+                                        <th>Driver Contact </th>
+                                        <th>Hotel Room Type </th>
+                                        <th>Hotel Charges </th>
+                                        <th>Guide Service </th>
+                                        <th>Guide Charges </th>
+                                         <th>Advance Payment Received </th>
+                                          <th>Total Balance Amount </th>
+                                          <th>First Followup Date </th>
+                                           <th>Second Followup Date </th> 
+                                           <th>Last Followup Date </th>
+                                            <th>Review </th>
+                                              <th>Status</th>
+                                               <th>Total Amount</th>
+                      
+                                             <th width="180">Action</th>
                     </tr>
 
                 </thead>
@@ -92,6 +116,42 @@
                         <td>{{ $booking->trip_start_date }}</td>
 
                         <td>{{ $booking->trip_end_date }}</td>
+
+                        <td>{{ $booking->enquiry_date }}</td>
+
+                        <td>{{ $booking->package_details }}</td>
+
+                        <td>{{ $booking->trip_start_date }}</td>
+
+
+                        <td>{{ $booking->trip_end_date }}</td>
+                        <td>{{ $booking->pickup_location }}</td>
+                        <td>{{ $booking->pickup_time }}</td>
+
+                        <td>{{ $booking->drop_location }}</td>
+                        <td>{{ $booking->drop_time }}</td>
+                        <td>{{ $booking->no_of_adults }}</td>
+
+                        <td>{{ $booking->car_type }}</td>
+                        <td>{{ $booking->car_charges_per_day }}</td>
+                         <td>{{ $booking->car_number }}</td>
+                         
+                        <td>{{ $booking->driver_name }}</td>
+                        <td>{{ $booking->driver_contact }}</td>
+                         <td>{{ $booking->hotel_room_type }}</td>
+
+                          <td>{{ $booking->hotel_charges }}</td>
+                        <td>{{ $booking->guide_service }}</td>
+                         <td>{{ $booking->guide_charges }}</td>
+
+                         <td>{{ $booking->advance_payment_received }}</td>
+
+                        <td>  ₹ {{ number_format($booking->total_balance_amount ?? 0, 2) }}
+                        </td>
+                         <td>{{ $booking->first_followup_date }}</td>
+                         <td>{{ $booking->second_followup_date }}</td>
+                        <td>{{ $booking->last_followup_date }}</td>
+                         <td>{{ $booking->review }}</td>
 
                         <td>
 
@@ -121,11 +181,6 @@
                         <td>
                             ₹ {{ number_format($booking->total_amount ?? 0, 2) }}
                         </td>
-
-                        <td>
-                            ₹ {{ number_format($booking->total_balance_amount ?? 0, 2) }}
-                        </td>
-
                         <td>
 
                             <!-- <a href="{{ route('tour-bookings.show', $booking->id) }}"
