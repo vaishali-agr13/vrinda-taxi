@@ -13,29 +13,29 @@
     <title>Vrinda Taxi Service | Best Taxi Service in Vrindavan & Mathura</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="front-end/assets/img/logo/favicon.png" />
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/slimselect.min.css" />
-    <link rel="stylesheet" href="assets/css/flatpickr.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="front-end/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/all-fontawesome.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/animate.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/slimselect.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="front-end/assets/css/style.css" />
 </head>
 
 <body>
 
 
     <!--===== header ==========-->
-    <?php include("header.php"); ?>
+  @include('front-end.layouts.header')
 
     <!--===== header ==========-->
     <main class="main">
         <!-- breadcrumb -->
-        <div class="site-breadcrumb ng-mt" style="background: url(assets/img/breadcrumb/01.jpg)">
+        <div class="site-breadcrumb ng-mt" style="background: url(front-end/assets/img/breadcrumb/01.jpg)">
             <div class="container">
                 <h3 class="breadcrumb-title">Package</h3>
                 <ul class="breadcrumb-menu">
@@ -355,7 +355,7 @@
 
 
     <!--======== footer =========-->
-    <?php include("footer.php"); ?>
+       @include('front-end.layouts.footer')
     <!--======== footer =========-->
 
 

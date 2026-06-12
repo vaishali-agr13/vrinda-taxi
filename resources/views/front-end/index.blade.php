@@ -96,7 +96,6 @@
   
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <style>
         .trip-toggle-wrap {
@@ -276,7 +275,7 @@
 
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <label class="form-label">Mobile Number</label>
+                                <label class="form-label">Email Id</label>
                                 <div class="form-icon">
                                     <i class="fa fa-envelope"></i>
                                     <input type="email"
@@ -286,7 +285,8 @@
                                         required>
                                 </div>
                             </div>
-                        </div>
+                        </div><div class="w-100"></div>
+
 
                         <!-- Pickup -->
                         <div class="col-lg-3">
@@ -351,7 +351,7 @@
 
                         <!-- Button -->
                         <div class="col-lg-2">
-                            <button class="theme-btn w-100" type="submit">
+                            <button style="margin-top:36px;" class="theme-btn w-100" type="submit">
                                 Book Car <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>

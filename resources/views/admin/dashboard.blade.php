@@ -12,8 +12,8 @@
 
     <div class="row">
 
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
+       <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card bg-primary text-white shadow h-100">
                 <div class="card-body">
                     <h6>Total Bookings</h6>
                     <h3>{{ $totalBookings }}</h3>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card bg-warning text-dark shadow h-100">
                 <div class="card-body">
                     <h6>Pending Bookings</h6>
                     <h3>{{ $pendingBookings }}</h3>
@@ -30,8 +30,8 @@
             </div>
         </div>
 
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
+       <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card bg-success text-white shadow h-100">
                 <div class="card-body">
                     <h6>Confirmed Bookings</h6>
                     <h3>{{ $confirmedBookings }}</h3>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card bg-danger text-white shadow h-100">
                 <div class="card-body">
                     <h6>Cancelled Bookings</h6>
                     <h3>{{ $cancelledBookings }}</h3>
@@ -50,11 +50,10 @@
 
     </div>
 
-    <div class="row">
-
+   <div class="row">
 
         <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card shadow">
+            <div class="card bg-info text-white shadow h-100">
                 <div class="card-body">
                     <h6>Total Enquiries</h6>
                     <h3>{{ $totalContacts }}</h3>
@@ -63,7 +62,7 @@
         </div>
 
         <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card shadow">
+            <div class="card bg-secondary text-white shadow h-100">
                 <div class="card-body">
                     <h6>Total Packages</h6>
                     <h3>{{ $totalPackages }}</h3>

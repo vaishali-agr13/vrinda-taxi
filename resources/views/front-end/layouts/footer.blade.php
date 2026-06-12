@@ -476,7 +476,7 @@
          <div class="copyright">
              <div class="row">
                  <div class="col-md-8 align-self-center">
-                     <p class="copyright-text">&copy; Copyright <span id="date"></span> <a href="https://www.sitedigitalmarket.com/" target="_blank"> Vrinda Taxi Service All Rights Reserved. Design By Site Digital Market</a> </p>
+                     <p class="copyright-text">&copy; Copyright <span id="date"></span> <a href="https://vipdigitalhub.com/" target="_blank"> Vrinda Taxi Service All Rights Reserved. Design By VIP Digital Hub</a> </p>
                  </div>
                  <div class="col-md-4 align-self-center">
                      <ul class="footer-social">

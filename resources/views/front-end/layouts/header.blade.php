@@ -1,4 +1,5 @@
   <link rel="icon" type="image/x-icon" href="{{ asset('front-end/assets/img/logo/favicon.png') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('front-end/assets/css/bootstrap.min.css') }}" />
@@ -169,13 +170,13 @@
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
 
 
 
 
 
-                                <li class="nav-item"><a class="nav-link" href="#">Package</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/package">Package</a></li>
 
                                 <li class="nav-item dropdown">
 
@@ -183,25 +184,25 @@
 
                                     <ul class="dropdown-menu fade-down">
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Delhi Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Delhi Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Agra Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Agra Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Vrindavan Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Vrindavan Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Ayodhya Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Ayodhya Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Prayagraj Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Prayagraj Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Jaipur Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Jaipur Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Noida Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Noida Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Gurgaon Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Gurgaon Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Haridwar Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Haridwar Taxi Service</a></li>
 
-                                        <li><a class="dropdown-item" href="#">Mathura to Varanasi Taxi Service</a></li>
+                                        <li><a class="dropdown-item" href="/vrindavan-to-rishikesh-taxi-service">Mathura to Varanasi Taxi Service</a></li>
 
                                         <li><a class="dropdown-item" href="#"> Mathura to Ghaziabad Taxi Service</a></li>
 
