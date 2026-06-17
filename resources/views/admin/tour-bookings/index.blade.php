@@ -94,7 +94,6 @@
                                               <th>Status</th>
                                                <th>Total Amount</th>
                       
-                                             <th width="180">Action</th>
                     </tr>
 
                 </thead>
