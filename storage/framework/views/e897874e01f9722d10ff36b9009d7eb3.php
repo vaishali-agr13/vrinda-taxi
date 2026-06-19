@@ -337,7 +337,7 @@
  <!-- footer area -->
  <footer class="footer-area footer-2 pb-40">
      <div class="footer-shape">
-         <img src="{{ asset('front-end/assets/img/shape/02.png') }}" alt="" />
+         <img src="<?php echo e(asset('front-end/assets/img/shape/02.png')); ?>" alt="" />
      </div>
      <div class="footer-widget">
          <div class="container">
@@ -348,7 +348,7 @@
                      <div class="col-lg-4">
                          <div class="footer-widget-box about-us">
                              <a href="#" class="footer-logo">
-                                 <img src="{{ asset('front-end/assets/img/logo/logo.png') }}" alt="" />
+                                 <img src="<?php echo e(asset('front-end/assets/img/logo/logo.png')); ?>" alt="" />
                              </a>
                              <p>
                                  Company Name: Vrinda Taxi Service<br>
@@ -362,13 +362,13 @@
                                  <h4>We Accept Payment Gateway</h4>
                                  <div class="payment-wrap">
                                      <div class="payment-img">
-                                         <img class="paypal" src="{{ asset('front-end/assets/img/payment/1.png') }}" alt="" />
+                                         <img class="paypal" src="<?php echo e(asset('front-end/assets/img/payment/1.png')); ?>" alt="" />
                                      </div>
                                      <div class="payment-img">
-                                         <img class="master" src="{{ asset('front-end/assets/img/payment/2.png') }}" alt="" />
+                                         <img class="master" src="<?php echo e(asset('front-end/assets/img/payment/2.png')); ?>" alt="" />
                                      </div>
                                      <div class="payment-img">
-                                         <img class="visa" src="{{ asset('front-end/assets/img/payment/3.png') }}" alt="" />
+                                         <img class="visa" src="<?php echo e(asset('front-end/assets/img/payment/3.png')); ?>" alt="" />
                                      </div>
                                      <!-- <div class="payment-img">
                         <img class="google" src="assets/img/payment/google-pay.png" alt="" />
@@ -476,7 +476,7 @@
          <div class="copyright">
              <div class="row">
                  <div class="col-md-8 align-self-center">
-                     <p class="copyright-text">&copy; Copyright <span id="date"></span> <a href="https://www.vrindavandigitalmarketing.com/" target="_blank"> Vrinda Taxi Service All Rights Reserved. Design By Vrindavan Digital Marketing/</a> </p>
+                     <p class="copyright-text">&copy; Copyright <span id="date"></span> <a href="https://www.vrindavandigitalmarketing.com/" target="_blank"> Vrinda Taxi Service All Rights Reserved. Design By VIP Digital Hub</a> </p>
                  </div>
                  <div class="col-md-4 align-self-center">
                      <ul class="footer-social">
@@ -510,17 +510,17 @@
 
  <!-- js -->
  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
- <script src="{{ asset('front-end/assets/js/jquery-3.7.1.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/bootstrap.bundle.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/jquery.magnific-popup.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/isotope.pkgd.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/jquery.appear.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/owl.carousel.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/counter-up.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/wow.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/slimselect.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/flatpickr.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/main.js') }}"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/jquery-3.7.1.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/bootstrap.bundle.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/jquery.magnific-popup.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/isotope.pkgd.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/jquery.appear.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/owl.carousel.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/counter-up.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/wow.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/slimselect.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/flatpickr.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/main.js')); ?>"></script>
  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1190e059c5bc497bafd35e121aae37b1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
  <!-- Floating Sidebar -->
  <div class="floating-contact">
@@ -572,3 +572,4 @@ document.addEventListener("keydown", function (e) {
     }
 });
 </script> 
+<?php /**PATH C:\laragon\www\vrinda-taxi\resources\views/front-end/layouts/footer.blade.php ENDPATH**/ ?>
