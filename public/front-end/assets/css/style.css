@@ -7100,5 +7100,9 @@ span.flatpickr-weekday {
     width: 65px;
 }
 
+.nav-btn .theme-btn{
+    white-space: nowrap;
+}
+
 
 /* =================== END ================== *//*# sourceMappingURL=style.css.map */

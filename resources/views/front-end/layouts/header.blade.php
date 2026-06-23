@@ -327,10 +327,10 @@
                   </div> -->
 
                                 <div class="nav-btn">
-
-                                    <a href="#book-now-form" class="theme-btn"><span class="far fa-car"></span> Book A Car</a>
-
-                                </div>
+                                <a href="#book-now-form" class="theme-btn">
+                                    <span class="far fa-car"></span> Book A Car
+                                </a>
+                            </div>
 
                                 <button type="button" class="sidebar-btn nav-right-link" data-bs-toggle="offcanvas" data-bs-target="#sidebarPopup">
 

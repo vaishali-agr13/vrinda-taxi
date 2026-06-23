@@ -16,6 +16,7 @@ Route::get('/about', function () {return view('front-end.about'); })->name('abou
 Route::get('/package', function () {return view('front-end.package'); })->name('package');
 Route::get('/vrindavan-to-rishikesh-taxi-service', function () {return view('front-end.vrindavan-to-rishikesh-taxi-service'); });
 
+Route::get('/{slug}', [BookingController::class, 'taxiService'])->name('taxi.service');
 
 
 Route::prefix('admin')->group(function () {

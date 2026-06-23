@@ -19,168 +19,218 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
                      <div class="content">
-                         <span class="from-city">Taxi Service in Vrindavan</span>
-                         <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Delhi</span>
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-delhi']) }}">
+
+                                <span class="from-city">Taxi Service in Vrindavan</span>
+                                <i class="fas fa-long-arrow-right"></i>
+                                <span class="to-city">Delhi</span>
+                        </a>
                      </div>
-                     <a href="vrindavan-to-delhi-taxi-service.php" class="theme-btn" title="Book Cab Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Book Cab Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
                      <div class="content">
+                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-dehradun']) }}">
+
                          <span class="from-city">Cab service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
-                         <span class="to-city">Dehradun</span>
+                         <span class="to-city">Dehradun</span> 
+                      </a>
                      </div>
-                     <a href="vrindavan-to-dehradun-taxi-service.php" class="theme-btn" title="Vrindavan Local Taxi"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Local Taxi"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Varanasi']) }}">
+
                          <span class="from-city"> Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Varanasi</span>
-                     </div>
-                     <a href="vrindavan-to-varanasi-taxi-service.php" class="theme-btn" title="Affordable Cab Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                         </a>
+                       </div>
+                      
+                     <a href="#" class="theme-btn" title="Affordable Cab Vrindavan"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-UdaiPur']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">UdaiPur</span>
+                        </a>
                      </div>
-                     <a href="vrindavan-to-udaipur-taxi-service.php" class="theme-btn" title="Vrindavan Tour Taxi"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Tour Taxi"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Risikesh']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan </span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Risikesh</span>
+                        </a>
                      </div>
-                     <a href="vrindavan-to-rishikesh-taxi-service.php" class="theme-btn" title="Vrindavan Outstation Taxi"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Outstation Taxi"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Shimla']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan </span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Shimla</span>
+                         </a>
                      </div>
-                     <a href="vrindavan-to-shimla-taxi-service.php" class="theme-btn" title="Vrindavan Cab Booking Online"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Cab Booking Online"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
                      <div class="content">
+                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Noida']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan </span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Noida</span>
+                      </a>
                      </div>
-                     <a href="vrindavan-to-noida-taxi-service.php" class="theme-btn" title="Vrindavan Car Hire Service"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Car Hire Service"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
                      <div class="content">
+                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Pushkar']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Pushkar</span>
+                       </a>
                      </div>
-                     <a href="vrindavan-to-pushkar-taxi-service.php" class="theme-btn" title="Best Taxi Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Best Taxi Service in Vrindavan"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Manali']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Manali</span>
-                     </div>
-                     <a href="vrindavan-to-manali-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                       </a>
+                        </div>
+
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
 
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Mathura']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Mathura</span>
+                        </a>
                      </div>
-                     <a href="vrindavan-to-mathura-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
 
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Jaipur']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan </span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Jaipur</span>
+                        </a>
                      </div>
-                     <a href="vrindavan-to-jaipur-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
 
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Lucknow']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Lucknow</span>
-                     </div>
-                     <a href="vrindavan-to-lucknow-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                    </a>
+                        </div>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Gurgaon']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Gurgaon</span>
+                         </a>
                      </div>
-                     <a href="vrindavan-to-gurgaon-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Haridwar']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Haridwar</span>
+                       </a>
                      </div>
-                     <a href="vrindavan-to-haridwar-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Faridabad']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Faridabad</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-faridabad-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                                                <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Crysta']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Crysta</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-crysta-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
@@ -189,143 +239,182 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Religious']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Religious</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-religious-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
             <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Braj-Yatra']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Braj Yatra</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-braj-yatra-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Private-Taxi']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Private Taxi</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-private-taxi-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                       <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Parikrama']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Parikrama</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-parikrama-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Mandir-Dham']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Mandir Dham</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-mandir-dham-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Local']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Local</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-local-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Tourist']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Tourist</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-tourist-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Jewar']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Jewar</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-jewar-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Hathras']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Hathras</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-hathras-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Etah']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Etah</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-etah-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Delhi-Airport']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Delhi Airport</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-faridabad-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Faridabad']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Faridabad</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-faridabad-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
+                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Ajmer']) }}">
+
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
                          <span class="to-city">Ajmer</span>
+</a>
                      </div>
-                     <a href="vrindavan-to-ajmer-taxi-service.php" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
+                     <a href="#" class="theme-btn" title="Vrindavan Taxi Contact"><i class="fas fa-arrow-right"></i></a>
                  </div>
              </div>
              

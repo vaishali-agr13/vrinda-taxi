@@ -8,7 +8,7 @@
              <div class="col-lg-7 mx-auto">
                  <div class="site-heading text-center wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                      <span class="site-title-tagline"><i class="far fa-car"></i> Destination</span>
-                     <h3 class="site-title">Explore our popular <span>Vrindavan Taxi Services</span></h3>
+                     <h3 class="site-title">Explore our popular <span>Vrindavan Taxi Services===</span></h3>
                      <div class="heading-divider"></div>
                  </div>
              </div>

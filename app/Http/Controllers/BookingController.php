@@ -167,6 +167,10 @@ class BookingController extends Controller
         }
 
    
+    public function taxiService($slug)
+    {
+        return view('front-end.taxi-service', compact('slug'));
+    }
 
     public function update(Request $request, $id)
     {
