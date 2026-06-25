@@ -28,14 +28,14 @@
 <meta property="og:description" content="Affordable taxi service in Vrindavan near Chaar Dham Mandir. Local & outstation cab with safe drivers. Book now!">
 <meta property="og:url" content="https://vrindataxiservice.com/">
 <meta property="og:site_name" content="Vrinda Taxi Service">
-<meta property="og:image" content="{{ asset('front-end/assets/img/logo/logo.png') }}">
+<meta property="og:image" content="<?php echo e(asset('front-end/assets/img/logo/logo.png')); ?>">
 <meta property="og:locale" content="en_IN">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Taxi Service in Vrindavan | Vrinda Taxi">
 <meta name="twitter:description" content="Book trusted taxi service in Vrindavan near Chaar Dham Mandir. 24/7 cab available.">
-<meta name="twitter:image" content="{{ asset('front-end/assets/img/logo/logo.png') }}">
+<meta name="twitter:image" content="<?php echo e(asset('front-end/assets/img/logo/logo.png')); ?>">
 
 <!-- Local SEO (Geo Tags) -->
 <meta name="geo.region" content="IN-UP">
@@ -46,7 +46,7 @@
 <!-- Schema Markup (VERY IMPORTANT FOR RANKING) -->
 
 
-@verbatim
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,7 +76,7 @@
   ]
 }
 </script>
-@endverbatim
+
 
 
 
@@ -163,7 +163,7 @@
 
 
     <!--===== header ==========-->
-@include('front-end.layouts.header')
+<?php echo $__env->make('front-end.layouts.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     <!--===== header ==========-->
 
     <main class="main">
@@ -185,21 +185,21 @@
 
                 <div class="carousel-item active">
                     <!-- <img src="assets/img/hero/1.png" alt="Vrinda Taxi Service" class="d-block" style="width:100%"> -->
-                    <video autoplay loop muted playsinline src="{{ asset('front-end/assets/video/banner-1.mp4') }}" style="width:100%; height:523px; object-fit:cover;"></video>
+                    <video autoplay loop muted playsinline src="<?php echo e(asset('front-end/assets/video/banner-1.mp4')); ?>" style="width:100%; height:523px; object-fit:cover;"></video>
                 </div>
 
 
                 <!-- <div class="carousel-item active">
-                    <img src="{{ asset('front-end/assets/img/hero/1.png') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
+                    <img src="<?php echo e(asset('front-end/assets/img/hero/1.png')); ?>" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('front-end/assets/img/hero/slider1.webp') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
+                    <img src="<?php echo e(asset('front-end/assets/img/hero/slider1.webp')); ?>" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('front-end/assets/img/hero/slider2.webp') }}" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
+                    <img src="<?php echo e(asset('front-end/assets/img/hero/slider2.webp')); ?>" alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('front-end/assets/img/hero/slider3.webp') }} " alt="Vrinda Taxi Service" class="d-block" style="width:100%">
+                    <img src="<?php echo e(asset('front-end/assets/img/hero/slider3.webp')); ?> " alt="Vrinda Taxi Service" class="d-block" style="width:100%">
                 </div> -->
             </div>
 
@@ -242,8 +242,8 @@
                     
                 </div>
 
-                <form method="POST" action="{{ route('booking.calculate') }}" onsubmit="return calculateDistanceBeforeSubmit(event)">
-                    @csrf
+                <form method="POST" action="<?php echo e(route('booking.calculate')); ?>" onsubmit="return calculateDistanceBeforeSubmit(event)">
+                    <?php echo csrf_field(); ?>
 
                     <input type="hidden" name="trip_type" id="tripType" value="">
                     <input type="hidden" name="distance_km" id="distanceKm">
@@ -380,7 +380,7 @@
                                 <div class="feature-content">
                                     <span class="count">01</span>
                                     <div class="feature-icon">
-                                        <img src="{{ asset('front-end/assets/img/icon/car-book.svg') }}" alt="" />
+                                        <img src="<?php echo e(asset('front-end/assets/img/icon/car-book.svg')); ?>" alt="" />
                                     </div>
                                     <div class="feature-info">
                                         <h4>Easy & Hassle-Free Booking Process</h4>
@@ -394,7 +394,7 @@
                                 <div class="feature-content">
                                     <span class="count">02</span>
                                     <div class="feature-icon">
-                                        <img src="{{ asset('front-end/assets/img/icon/choose-car.svg') }}" alt="" />
+                                        <img src="<?php echo e(asset('front-end/assets/img/icon/choose-car.svg')); ?>" alt="" />
                                     </div>
                                     <div class="feature-info">
                                         <h4>Wide Range of Premium Quality Cars</h4>
@@ -408,7 +408,7 @@
                                 <div class="feature-content">
                                     <span class="count">03</span>
                                     <div class="feature-icon">
-                                        <img src="{{ asset('front-end/assets/img/icon/support.svg') }}" alt="" />
+                                        <img src="<?php echo e(asset('front-end/assets/img/icon/support.svg')); ?>" alt="" />
                                     </div>
                                     <div class="feature-info">
                                         <h4>24/7 Customers Support</h4>
@@ -434,15 +434,15 @@
                                 <div class="row g-3">
                                     <div class="col-6">
                                         <div class="img-1 mb-3">
-                                            <img src="{{ asset('front-end/assets/img/about/01.jpg') }}" alt="" />
+                                            <img src="<?php echo e(asset('front-end/assets/img/about/01.jpg')); ?>" alt="" />
                                         </div>
                                         <div class="img-3">
-                                            <img src="{{ asset('front-end/assets/img/about/03.jpg') }}" alt="" />
+                                            <img src="<?php echo e(asset('front-end/assets/img/about/03.jpg')); ?>" alt="" />
                                         </div>
                                     </div>
                                     <div class="col-6 align-self-center">
                                         <div class="img-2">
-                                            <img src="{{ asset('front-end/assets/img/about/02.jpg') }}" alt="" />
+                                            <img src="<?php echo e(asset('front-end/assets/img/about/02.jpg')); ?>" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -467,7 +467,7 @@
                                     <div class="col-md-7">
                                         <div class="about-item">
                                             <div class="icon">
-                                                <img src="{{ asset('front-end/assets/img/icon/money.svg') }}" alt="" />
+                                                <img src="<?php echo e(asset('front-end/assets/img/icon/money.svg')); ?>" alt="" />
                                             </div>
                                             <div class="content">
                                                 <h4>Affordable & Transparent Pricing</h4>
@@ -476,7 +476,7 @@
                                         </div>
                                         <div class="about-item">
                                             <div class="icon">
-                                                <img src="{{ asset('front-end/assets/img/icon/driver.svg') }}" alt="" />
+                                                <img src="<?php echo e(asset('front-end/assets/img/icon/driver.svg')); ?>" alt="" />
                                             </div>
                                             <div class="content">
                                                 <h4>Professional Personal Drivers</h4>
@@ -486,11 +486,11 @@
                                     </div>
                                     <div class="col-md-5">
                                         <ul class="about-list">
-                                            <li><img src="{{ asset('front-end/assets/img/icon/check.svg') }}" alt="" />Comfort</li>
-                                            <li><img src="{{ asset('front-end/assets/img/icon/driver.svg') }}" alt="" />Automatic</li>
-                                            <li><img src="{{ asset('front-end/assets/img/icon/driver.svg') }}" alt="" />Remote</li>
-                                            <li><img src="{{ asset('front-end/assets/img/icon/driver.svg') }}" alt="" />Hybrid</li>
-                                            <li><img src="{{ asset('front-end/assets/img/icon/driver.svg') }}" alt="" />Wireless</li>
+                                            <li><img src="<?php echo e(asset('front-end/assets/img/icon/check.svg')); ?>" alt="" />Comfort</li>
+                                            <li><img src="<?php echo e(asset('front-end/assets/img/icon/driver.svg')); ?>" alt="" />Automatic</li>
+                                            <li><img src="<?php echo e(asset('front-end/assets/img/icon/driver.svg')); ?>" alt="" />Remote</li>
+                                            <li><img src="<?php echo e(asset('front-end/assets/img/icon/driver.svg')); ?>" alt="" />Hybrid</li>
+                                            <li><img src="<?php echo e(asset('front-end/assets/img/icon/driver.svg')); ?>" alt="" />Wireless</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -516,7 +516,7 @@
                     </div>
                 </div>
                 <div class="row g-3">
-                    @foreach ($cars as $car)
+                    <?php $__currentLoopData = $cars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $car): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <div class="col-md-6 col-lg-4 col-xl-3">
                         <div class="car-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="car-top">
@@ -524,15 +524,15 @@
                                 <a href="#" class="favorite-btn"><i class="far fa-heart"></i></a>
                             </div>
                             <div class="car-img">
-                                <img src="{{ asset('public/uploads/cars/'. $car->car_image) }}" alt="Innova Crysta" />
+                                <img src="<?php echo e(asset('public/uploads/cars/'. $car->car_image)); ?>" alt="Innova Crysta" />
                             </div>
                             <div class="car-content">
-                                <h4><a href="car-single.php">{{$car->car_name}}</a></h4>
+                                <h4><a href="car-single.php"><?php echo e($car->car_name); ?></a></h4>
                                 <ul class="info-list">
-                                    <li><i class="far fa-steering-wheel"></i>{{$car->transmission_type}}</li>
-                                    <li><i class="far fa-user-tie"></i>{{$car->passengers}} Traveler</li>
-                                    <li><i class="far fa-car"></i>{{$car->car_model}}</li>
-                                    <li><i class="far fa-gas-pump"></i>{{$car->fuel_type}}</li>
+                                    <li><i class="far fa-steering-wheel"></i><?php echo e($car->transmission_type); ?></li>
+                                    <li><i class="far fa-user-tie"></i><?php echo e($car->passengers); ?> Traveler</li>
+                                    <li><i class="far fa-car"></i><?php echo e($car->car_model); ?></li>
+                                    <li><i class="far fa-gas-pump"></i><?php echo e($car->fuel_type); ?></li>
                                     <!-- <li><i class="far fa-road"></i>19km / litre</li> -->
                                 </ul>
                             </div>
@@ -541,7 +541,7 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 
                 </div>
                 <!-- <div class="col-12 text-center mt-5 wow fadeInUp">
@@ -571,7 +571,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img mb-4">
-                                <img src="{{ asset('front-end/assets/img/spiritual/package-1.webp') }}" alt=" Days Mathura Vrindavan Tour">
+                                <img src="<?php echo e(asset('front-end/assets/img/spiritual/package-1.webp')); ?>" alt=" Days Mathura Vrindavan Tour">
                             </div>
                             <div class="blog-info">
                                 <h4 class="blog-title">
@@ -588,7 +588,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img mb-4">
-                                <img src="{{ asset('front-end/assets/img/spiritual/package-2.webp') }}" alt="3 Days Mathura Bharatpur Tour">
+                                <img src="<?php echo e(asset('front-end/assets/img/spiritual/package-2.webp')); ?>" alt="3 Days Mathura Bharatpur Tour">
                             </div>
                             <div class="blog-info">
                                 <h4 class="blog-title">
@@ -607,7 +607,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img mb-4">
-                                <img src="{{ asset('front-end/assets/img/spiritual/package-3.webp') }}" alt="Braj 84 Kos Yatra">
+                                <img src="<?php echo e(asset('front-end/assets/img/spiritual/package-3.webp')); ?>" alt="Braj 84 Kos Yatra">
                             </div>
                             <div class="blog-info">
                                 <h4 class="blog-title">
@@ -624,7 +624,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img mb-4">
-                                <img src="{{ asset('front-end/assets/img/spiritual/package-4.webp') }}" alt="Full Day Mathura Vrindavan">
+                                <img src="<?php echo e(asset('front-end/assets/img/spiritual/package-4.webp')); ?>" alt="Full Day Mathura Vrindavan">
                             </div>
                             <div class="blog-info">
                                 <h4 class="blog-title">
@@ -641,7 +641,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img mb-4">
-                                <img src="{{ asset('front-end/assets/img/spiritual/package-5.webp') }}" alt="Same Day Tour from Delhi">
+                                <img src="<?php echo e(asset('front-end/assets/img/spiritual/package-5.webp')); ?>" alt="Same Day Tour from Delhi">
                             </div>
                             <div class="blog-info">
                                 <h4 class="blog-title">
@@ -658,7 +658,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item">
                             <div class="blog-img mb-4">
-                                <img src="{{ asset('front-end/assets/img/spiritual/package-6.webp') }}" alt="Mathura Vrindavan with Agra">
+                                <img src="<?php echo e(asset('front-end/assets/img/spiritual/package-6.webp')); ?>" alt="Mathura Vrindavan with Agra">
                             </div>
                             <div class="blog-info">
                                 <h4 class="blog-title">
@@ -714,7 +714,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p1.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p1.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">2 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -737,7 +737,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p2.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p2.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">3 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -760,7 +760,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p3.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p3.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">3 Days</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -782,7 +782,7 @@
                     <!-- 4 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src="{{ asset('front-end/assets/img/package/p4.webp') }}" class="card-img-top" alt="">
+                            <img src="<?php echo e(asset('front-end/assets/img/package/p4.webp')); ?>" class="card-img-top" alt="">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="fw-bold"><a href="mathura.php">Braj 84 Kos Yatra Short Tour</a></h5>
                                 <p class="text-muted">Sacred Braj Bhoomi pilgrimage circuit.</p>
@@ -803,7 +803,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p5.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p5.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">1 Day</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -826,7 +826,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p6.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p6.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Same Day</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -850,7 +850,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p7.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p7.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -873,7 +873,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p9.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p9.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -897,7 +897,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p10.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p10.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -920,7 +920,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p11.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p11.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Festival</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -943,7 +943,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p12.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p12.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -966,7 +966,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="position-relative">
-                                <img src="{{ asset('front-end/assets/img/package/p13.webp') }}" class="card-img-top" alt="">
+                                <img src="<?php echo e(asset('front-end/assets/img/package/p13.webp')); ?>" class="card-img-top" alt="">
                                 <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3">Tour</span>
                             </div>
                             <div class="card-body d-flex flex-column">
@@ -1010,12 +1010,12 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/premnanad/1.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/premnanad/1.png')); ?>" class="mb-4" alt="" />
 
                                 <h5>Premanand Maharaj Ji</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/premnanad/1.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/premnanad/1.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1023,11 +1023,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/premnanad/2.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/premnanad/2.png')); ?>" class="mb-4" alt="" />
                                 <h5>Amrish Maharaj Ji</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/premnanad/2.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/premnanad/2.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1036,11 +1036,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/premnanad/3.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/premnanad/3.png')); ?>" class="mb-4" alt="" />
                                 <h5>Shri Rajendra Das ji Maharaj</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/premnanad/3.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/premnanad/3.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1049,11 +1049,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/premnanad/4.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/premnanad/4.png')); ?>" class="mb-4" alt="" />
                                 <h5>Vinod Baba ji Maharaj</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/premnanad/4.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/premnanad/4.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1083,11 +1083,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/lord/2.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/lord/2.png')); ?>" class="mb-4" alt="" />
                                 <h5>Banke Bihari</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/lord/1.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/lord/1.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1095,11 +1095,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/lord/1.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/lord/1.png')); ?>" class="mb-4" alt="" />
                                 <h5>Barsana Ladli Ji</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/lord/2.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/lord/2.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1108,11 +1108,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/lord/3.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/lord/3.png')); ?>" class="mb-4" alt="" />
                                 <h5>Radha Raman Ji</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/lord/3.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/lord/3.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1120,11 +1120,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/lord/4.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/lord/4.png')); ?>" class="mb-4" alt="" />
                                 <h5>Nidhivan</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/lord/4.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/lord/4.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1132,11 +1132,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/lord/5.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/lord/5.png')); ?>" class="mb-4" alt="" />
                                 <h5>Prem Mandir</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/lord/4.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/lord/4.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1145,11 +1145,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/lord/6.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/lord/6.png')); ?>" class="mb-4" alt="" />
                                 <h5>Iskon Mandir</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/lord/4.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/lord/4.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1158,11 +1158,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/lord/7.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/lord/7.png')); ?>" class="mb-4" alt="" />
                                 <h5>Radha Ballabh Ji</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/lord/4.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/lord/4.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1170,11 +1170,11 @@
                     <div class="col-md-3">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/lord/8.png') }}" class="mb-4" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/lord/8.png')); ?>" class="mb-4" alt="" />
                                 <h5>Rang Ji Mandir</h5>
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/lord/4.png') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/lord/4.png')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1234,10 +1234,10 @@
                       <div class="col-lg-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay="${delay}s">
                           <div class="gallery-img">
-                            <img src="{{ asset('front-end/assets/img/gallery/gal/${imageNumber}.webp') }}" alt="Gallery Image ${imageNumber}" class="img-fluid" />
+                            <img src="<?php echo e(asset('front-end/assets/img/gallery/gal/${imageNumber}.webp')); ?>" alt="Gallery Image ${imageNumber}" class="img-fluid" />
                           </div>
                           <div class="gallery-content">
-                            <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/gal/${imageNumber}.webp') }}">
+                            <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/gal/${imageNumber}.webp')); ?>">
                               <i class="fal fa-plus"></i>
                             </a>
                           </div>
@@ -1271,7 +1271,7 @@
                         <div class="service-item wow fadeInUp" data-wow-delay=".2s">
                             <span class="count">01</span>
                             <div class="service-icon">
-                                <img src="{{ asset('front-end/assets/img/icon/car.svg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/icon/car.svg')); ?>" alt="" />
                             </div>
                             <div class="service-content">
                                 <h4><a href="#">Car Rental With Driver</a></h4>
@@ -1288,7 +1288,7 @@
                         <div class="service-item wow fadeInUp" data-wow-delay=".4s">
                             <span class="count">02</span>
                             <div class="service-icon">
-                                <img src="{{ asset('front-end/assets/img/icon/car-business.svg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/icon/car-business.svg')); ?>" alt="" />
                             </div>
                             <div class="service-content">
                                 <h4><a href="#">Corporate & Business Rental</a></h4>
@@ -1305,7 +1305,7 @@
                         <div class="service-item wow fadeInUp" data-wow-delay=".6s">
                             <span class="count">03</span>
                             <div class="service-icon">
-                                <img src="{{ asset('front-end/assets/img/icon/luxuary-car.svg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/icon/luxuary-car.svg')); ?>" alt="" />
                             </div>
                             <div class="service-content">
                                 <h4><a href="#">Luxury Car Rental</a></h4>
@@ -1322,7 +1322,7 @@
                         <div class="service-item wow fadeInUp" data-wow-delay=".2s">
                             <span class="count">04</span>
                             <div class="service-icon">
-                                <img src="{{ asset('front-end/assets/img/icon/private-car.svg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/icon/private-car.svg')); ?>" alt="" />
                             </div>
                             <div class="service-content">
                                 <h4><a href="#">Self Drive Car Rental</a></h4>
@@ -1339,7 +1339,7 @@
                         <div class="service-item wow fadeInUp" data-wow-delay=".4s">
                             <span class="count">05</span>
                             <div class="service-icon">
-                                <img src="{{ asset('front-end/assets/img/icon/airport-car.svg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/icon/airport-car.svg')); ?>" alt="" />
                             </div>
                             <div class="service-content">
                                 <h4><a href="#">Airport Transfer Service</a></h4>
@@ -1372,7 +1372,7 @@
         <!-- cta-area -->
         <div class="cta-area pt-120">
             <div class="container">
-                <div class="cta-wrap wow fadeInUp" data-wow-delay=".2s" style="background-image: url('{{ asset('front-end/assets/img/cta/01.jpg') }}')">
+                <div class="cta-wrap wow fadeInUp" data-wow-delay=".2s" style="background-image: url('<?php echo e(asset('front-end/assets/img/cta/01.jpg')); ?>')">
                     <div class="row align-items-center">
                         <div class="col-lg-7 text-center text-lg-start">
                             <div class="cta-text cta-divider">
@@ -1399,7 +1399,7 @@
 
         <!-- video-area -->
         <div class="video-area pt-120">
-            <div class="video-content" style="background-image: url('{{ asset('front-end/assets/img/video/01.jpg') }}')">
+            <div class="video-content" style="background-image: url('<?php echo e(asset('front-end/assets/img/video/01.jpg')); ?>')">
                 <div class="video-wrap">
                     <a class="play-btn popup-youtube" href="#">
                         <i class="fas fa-play"></i>
@@ -1417,7 +1417,7 @@
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div class="counter-box">
                                 <div class="icon">
-                                    <img src="{{ asset('front-end/assets/img/icon/car-rent-2.svg') }}" alt="" />
+                                    <img src="<?php echo e(asset('front-end/assets/img/icon/car-rent-2.svg')); ?>" alt="" />
                                 </div>
                                 <div class="content">
                                     <div class="info">
@@ -1431,7 +1431,7 @@
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div class="counter-box">
                                 <div class="icon">
-                                    <img src="{{ asset('front-end/assets/img/icon/happy.svg') }}" alt="" />
+                                    <img src="<?php echo e(asset('front-end/assets/img/icon/happy.svg')); ?>" alt="" />
                                 </div>
                                 <div class="content">
                                     <div class="info">
@@ -1445,7 +1445,7 @@
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div class="counter-box">
                                 <div class="icon">
-                                    <img src="{{ asset('front-end/assets/img/icon/driver.svg') }}" alt="" />
+                                    <img src="<?php echo e(asset('front-end/assets/img/icon/driver.svg')); ?>" alt="" />
                                 </div>
                                 <div class="content">
                                     <div class="info">
@@ -1459,7 +1459,7 @@
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <div class="counter-box">
                                 <div class="icon">
-                                    <img src="{{ asset('front-end/assets/img/icon/car-checklist.svg') }}" alt="" />
+                                    <img src="<?php echo e(asset('front-end/assets/img/icon/car-checklist.svg')); ?>" alt="" />
                                 </div>
                                 <div class="content">
                                     <div class="info">
@@ -1496,7 +1496,7 @@
                             <!-- <div class="seva-icon">
                                     <i class="bi bi-person-arms-up"></i>
                                 </div> -->
-                            <img src="{{ asset('front-end/assets/img/seva/1.jpg') }}" class="img-fluid mb-4">
+                            <img src="<?php echo e(asset('front-end/assets/img/seva/1.jpg')); ?>" class="img-fluid mb-4">
                             <div class="seva-title">Banke Bihari Itra Seva</div>
                             <p class="text-muted mb-0">
                                 Special itra seva offered at Shri Banke Bihari Ji Temple.
@@ -1510,7 +1510,7 @@
                             <!-- <div class="seva-icon">
                                     <i class="bi bi-person-arms-up"></i>
                                 </div> -->
-                            <img src="{{ asset('front-end/assets/img/seva/2.jpg') }}" class="img-fluid mb-4">
+                            <img src="<?php echo e(asset('front-end/assets/img/seva/2.jpg')); ?>" class="img-fluid mb-4">
                             <div class="seva-title">Full Bangla Seva</div>
                             <p class="text-muted mb-0">
                                 Complete Bangla seva arranged with devotion and rituals.
@@ -1524,7 +1524,7 @@
                             <!-- <div class="seva-icon">
                                     <i class="bi bi-person-arms-up"></i>
                                 </div> -->
-                            <img src="{{ asset('front-end/assets/img/seva/3.jpg') }}" class="img-fluid mb-4">
+                            <img src="<?php echo e(asset('front-end/assets/img/seva/3.jpg')); ?>" class="img-fluid mb-4">
                             <div class="seva-title">Chhappan Bhog Seva</div>
                             <p class="text-muted mb-0">
                                 Traditional 56 bhog offering prepared as per temple customs.
@@ -1538,7 +1538,7 @@
                             <!-- <div class="seva-icon">
                                     <i class="bi bi-person-arms-up"></i>
                                 </div> -->
-                            <img src="{{ asset('front-end/assets/img/seva/4.jpg') }}" class="img-fluid mb-4">
+                            <img src="<?php echo e(asset('front-end/assets/img/seva/4.jpg')); ?>" class="img-fluid mb-4">
 
                             <div class="seva-title">Cow Seva</div>
                             <p class="text-muted mb-0">
@@ -1553,7 +1553,7 @@
                             <!-- <div class="seva-icon">
                                     <i class="bi bi-person-arms-up"></i>
                                 </div> -->
-                            <img src="{{ asset('front-end/assets/img/seva/5.jpg') }}" class="img-fluid mb-4">
+                            <img src="<?php echo e(asset('front-end/assets/img/seva/5.jpg')); ?>" class="img-fluid mb-4">
                             <div class="seva-title">Sant Seva</div>
                             <p class="text-muted mb-0">
                                 Seva for saints and sadhus as part of spiritual devotion.
@@ -1567,7 +1567,7 @@
                             <!-- <div class="seva-icon">
                                     <i class="bi bi-person-arms-up"></i>
                                 </div> -->
-                            <img src="{{ asset('front-end/assets/img/seva/6.jpg') }}" class="img-fluid mb-4">
+                            <img src="<?php echo e(asset('front-end/assets/img/seva/6.jpg')); ?>" class="img-fluid mb-4">
                             <div class="seva-title">Bhandara Seva</div>
                             <p class="text-muted mb-0">
                                 Community bhandara seva organized with proper arrangements.
@@ -1604,60 +1604,60 @@
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/01.webp') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/01.webp')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/01.webp') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/01.webp')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".4s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/02.webp') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/02.webp')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/02.webp') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/02.webp')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".6s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/03.webp') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/03.webp')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/03.webp') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/03.webp')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".8s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/04.webp') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/04.webp')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/04.webp') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/04.webp')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/05.webp') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/05.webp')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/05.webp') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/05.webp')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".4s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/06.webp') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/06.webp')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/06.webp') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/06.webp')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1685,10 +1685,10 @@
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/4.jpeg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/4.jpeg')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/4.jpeg') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/4.jpeg')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1697,10 +1697,10 @@
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/5.jpeg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/5.jpeg')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/5.jpeg') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/5.jpeg')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1709,10 +1709,10 @@
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/6.jpeg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/6.jpeg')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/6.jpeg') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/6.jpeg')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1721,10 +1721,10 @@
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/8.jpeg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/8.jpeg')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/8.jpeg') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/8.jpeg')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1732,48 +1732,10 @@
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/7.jpeg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/7.jpeg')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/7.jpeg') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/9.jpeg') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/9.jpeg') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/1.jpeg') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/1.jpeg') }}"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4">
-                        <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
-                            <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/2.jpeg') }}" alt="" />
-                            </div>
-                            <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/2.jpeg') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/7.jpeg')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1785,10 +1747,48 @@
                     <div class="col-md-4">
                         <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
                             <div class="gallery-img">
-                                <img src="{{ asset('front-end/assets/img/gallery/car/3.jpeg') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/9.jpeg')); ?>" alt="" />
                             </div>
                             <div class="gallery-content">
-                                <a class="popup-img gallery-link" href="{{ asset('front-end/assets/img/gallery/car/3.jpeg') }}"><i class="fal fa-plus"></i></a>
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/9.jpeg')); ?>"><i class="fal fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
+                            <div class="gallery-img">
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/1.jpeg')); ?>" alt="" />
+                            </div>
+                            <div class="gallery-content">
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/1.jpeg')); ?>"><i class="fal fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
+                            <div class="gallery-img">
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/2.jpeg')); ?>" alt="" />
+                            </div>
+                            <div class="gallery-content">
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/2.jpeg')); ?>"><i class="fal fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col-md-4">
+                        <div class="gallery-item wow fadeInUp" data-wow-delay=".2s">
+                            <div class="gallery-img">
+                                <img src="<?php echo e(asset('front-end/assets/img/gallery/car/3.jpeg')); ?>" alt="" />
+                            </div>
+                            <div class="gallery-content">
+                                <a class="popup-img gallery-link" href="<?php echo e(asset('front-end/assets/img/gallery/car/3.jpeg')); ?>"><i class="fal fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1823,7 +1823,7 @@
 
                                 <div class="choose-item wow fadeInUp" data-wow-delay=".2s">
                                     <div class="icon">
-                                        <img src="{{ asset('front-end/assets/img/icon/money.svg') }}" alt="" />
+                                        <img src="<?php echo e(asset('front-end/assets/img/icon/money.svg')); ?>" alt="" />
                                     </div>
                                     <div class="info">
                                         <h4>Best Price Guarantee</h4>
@@ -1836,7 +1836,7 @@
                                 <!-- 02 -->
                                 <div class="choose-item wow fadeInUp" data-wow-delay=".3s">
                                     <div class="icon">
-                                        <img src="{{ asset('front-end/assets/img/icon/car-time.svg') }}" alt="" />
+                                        <img src="<?php echo e(asset('front-end/assets/img/icon/car-time.svg')); ?>" alt="" />
                                     </div>
                                     <div class="info">
                                         <h4>24/7 Availability & On-Time Service</h4>
@@ -1849,7 +1849,7 @@
 
                                 <div class="choose-item wow fadeInUp" data-wow-delay=".4s">
                                     <div class="icon">
-                                        <img src="{{ asset('front-end/assets/img/icon/driver.svg') }}" alt="" />
+                                        <img src="<?php echo e(asset('front-end/assets/img/icon/driver.svg')); ?>" alt="" />
                                     </div>
                                     <div class="info">
                                         <h4>Professional & Experienced Drivers</h4>
@@ -1866,7 +1866,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="choose-img">
-                            <img src="{{ asset('front-end/assets/img/choose/01.png') }}" alt="" />
+                            <img src="<?php echo e(asset('front-end/assets/img/choose/01.png')); ?>" alt="" />
                         </div>
                     </div>
                 </div>
@@ -1889,7 +1889,7 @@
                   </p> -->
                             </div>
                             <div class="faq-img wow fadeInUp" data-wow-delay=".2s">
-                                <img src="{{ asset('front-end/assets/img/faq.png') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/faq.png')); ?>" alt="" />
                             </div>
                         </div>
                     </div>
@@ -2157,7 +2157,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSD4WISok0dBzVQ4IR_CMicIT_TsKUQvI&libraries=places&callback=initMap" async defer></script>
 
     <!--======== footer =========-->
-    @include('front-end.layouts.footer')
+    <?php echo $__env->make('front-end.layouts.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
     <!--======== footer =========-->
 
@@ -2167,3 +2167,4 @@
 
 </html>
 
+<?php /**PATH C:\laragon\www\vrinda-taxi\resources\views/front-end/index.blade.php ENDPATH**/ ?>

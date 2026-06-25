@@ -30,7 +30,7 @@
 
 
     <!--===== header ==========-->
-    <?php include("header.php"); ?>
+   @include('front-end.layouts.header')
 
     <!--===== header ==========-->
     <main class="main">
@@ -180,7 +180,7 @@ Mobile: ${mobile}`;
     </script>
 
     <!--======== footer =========-->
-    <?php include("footer.php"); ?>
+   @include('front-end.layouts.footer')
     <!--======== footer =========-->
 
 

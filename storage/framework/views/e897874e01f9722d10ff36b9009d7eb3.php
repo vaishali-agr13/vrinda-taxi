@@ -19,7 +19,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-delhi']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-delhi'])); ?>">
 
                                 <span class="from-city">Taxi Service in Vrindavan</span>
                                 <i class="fas fa-long-arrow-right"></i>
@@ -32,7 +32,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
                      <div class="content">
-                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-dehradun']) }}">
+                      <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-dehradun'])); ?>">
 
                          <span class="from-city">Cab service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -45,7 +45,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Varanasi']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Varanasi'])); ?>">
 
                          <span class="from-city"> Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -59,7 +59,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-UdaiPur']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-UdaiPur'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -72,7 +72,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Risikesh']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Risikesh'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan </span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -85,7 +85,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Shimla']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Shimla'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan </span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -98,7 +98,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".1s">
                      <div class="content">
-                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Noida']) }}">
+                      <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Noida'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan </span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -111,7 +111,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".2s">
                      <div class="content">
-                      <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Pushkar']) }}">
+                      <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Pushkar'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -124,7 +124,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Manali']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Manali'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -139,7 +139,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Mathura']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Mathura'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -153,7 +153,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Jaipur']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Jaipur'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan </span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -167,7 +167,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Lucknow']) }}">
+                    <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Lucknow'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -181,7 +181,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Gurgaon']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Gurgaon'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -195,7 +195,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Haridwar']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Haridwar'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -209,7 +209,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Faridabad']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Faridabad'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -223,7 +223,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                                                <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Crysta']) }}">
+                                                <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Crysta'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -239,7 +239,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Religious']) }}">
+                     <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Religious'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -253,7 +253,7 @@
             <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Braj-Yatra']) }}">
+                    <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Braj-Yatra'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -267,7 +267,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Private-Taxi']) }}">
+                    <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Private-Taxi'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -281,7 +281,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                       <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Parikrama']) }}">
+                       <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Parikrama'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -295,7 +295,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Mandir-Dham']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Mandir-Dham'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -309,7 +309,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Local']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Local'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -323,7 +323,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Tourist']) }}">
+                    <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Tourist'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -337,7 +337,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Jewar']) }}">
+                     <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Jewar'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -351,7 +351,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Hathras']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Hathras'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -365,7 +365,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Etah']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Etah'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -379,7 +379,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                     <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Delhi-Airport']) }}">
+                     <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Delhi-Airport'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -393,7 +393,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                    <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Faridabad']) }}">
+                    <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Faridabad'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -407,7 +407,7 @@
              <div class="col-md-6 col-lg-4">
                  <div class="destination-item wow fadeInUp" data-wow-delay=".3s">
                      <div class="content">
-                        <a href="{{ route('taxi.service', ['slug' => 'vrindavan-to-Ajmer']) }}">
+                        <a href="<?php echo e(route('taxi.service', ['slug' => 'vrindavan-to-Ajmer'])); ?>">
 
                          <span class="from-city">Taxi Service in Vrindavan</span>
                          <i class="fas fa-long-arrow-right"></i>
@@ -426,7 +426,7 @@
  <!-- footer area -->
  <footer class="footer-area footer-2 pb-40">
      <div class="footer-shape">
-         <img src="{{ asset('front-end/assets/img/shape/02.png') }}" alt="" />
+         <img src="<?php echo e(asset('front-end/assets/img/shape/02.png')); ?>" alt="" />
      </div>
      <div class="footer-widget">
          <div class="container">
@@ -437,7 +437,7 @@
                      <div class="col-lg-4">
                          <div class="footer-widget-box about-us">
                              <a href="#" class="footer-logo">
-                                 <img src="{{ asset('front-end/assets/img/logo/logo.png') }}" alt="" />
+                                 <img src="<?php echo e(asset('front-end/assets/img/logo/logo.png')); ?>" alt="" />
                              </a>
                              <p>
                                  Company Name: Vrinda Taxi Service<br>
@@ -451,13 +451,13 @@
                                  <h4>We Accept Payment Gateway</h4>
                                  <div class="payment-wrap">
                                      <div class="payment-img">
-                                         <img class="paypal" src="{{ asset('front-end/assets/img/payment/1.png') }}" alt="" />
+                                         <img class="paypal" src="<?php echo e(asset('front-end/assets/img/payment/1.png')); ?>" alt="" />
                                      </div>
                                      <div class="payment-img">
-                                         <img class="master" src="{{ asset('front-end/assets/img/payment/2.png') }}" alt="" />
+                                         <img class="master" src="<?php echo e(asset('front-end/assets/img/payment/2.png')); ?>" alt="" />
                                      </div>
                                      <div class="payment-img">
-                                         <img class="visa" src="{{ asset('front-end/assets/img/payment/3.png') }}" alt="" />
+                                         <img class="visa" src="<?php echo e(asset('front-end/assets/img/payment/3.png')); ?>" alt="" />
                                      </div>
                                      <!-- <div class="payment-img">
                         <img class="google" src="assets/img/payment/google-pay.png" alt="" />
@@ -500,13 +500,13 @@
                                     
                                     <ul class="collapse list-unstyled ps-3 mt-1" id="footerServices">
                                         <li class="mb-1">
-                                            <a href="{{ url('/airport-taxi') }}" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Airport Taxi</a>
+                                            <a href="<?php echo e(url('/airport-taxi')); ?>" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Airport Taxi</a>
                                         </li>
                                         <li class="mb-1">
-                                            <a href="{{ url('/outstation-taxi') }}" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Outstation Taxi</a>
+                                            <a href="<?php echo e(url('/outstation-taxi')); ?>" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Outstation Taxi</a>
                                         </li>
                                         <li>
-                                            <a href="{{ url('/vrindavan-sightseeing') }}" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Sightseeing</a>
+                                            <a href="<?php echo e(url('/vrindavan-sightseeing')); ?>" style="font-size: 13px; opacity: 0.8;"><i class="far fa-circle font-xs me-2" style="font-size: 8px;"></i>Sightseeing</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -621,17 +621,17 @@
 
  <!-- js -->
  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
- <script src="{{ asset('front-end/assets/js/jquery-3.7.1.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/bootstrap.bundle.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/jquery.magnific-popup.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/isotope.pkgd.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/jquery.appear.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/owl.carousel.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/counter-up.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/wow.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/slimselect.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/flatpickr.min.js') }}"></script>
- <script src="{{ asset('front-end/assets/js/main.js') }}"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/jquery-3.7.1.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/bootstrap.bundle.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/jquery.magnific-popup.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/isotope.pkgd.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/jquery.appear.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/owl.carousel.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/counter-up.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/wow.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/slimselect.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/flatpickr.min.js')); ?>"></script>
+ <script src="<?php echo e(asset('front-end/assets/js/main.js')); ?>"></script>
  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1190e059c5bc497bafd35e121aae37b1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
  <!-- Floating Sidebar -->
  <div class="floating-contact">
@@ -683,3 +683,4 @@ document.addEventListener("keydown", function (e) {
     }
 });
 </script> 
+<?php /**PATH C:\laragon\www\vrinda-taxi\resources\views/front-end/layouts/footer.blade.php ENDPATH**/ ?>

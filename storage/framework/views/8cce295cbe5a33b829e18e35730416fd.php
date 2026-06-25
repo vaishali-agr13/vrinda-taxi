@@ -63,7 +63,7 @@
     <!--===== header ==========-->
 
 
-       @include('front-end.layouts.header')
+       <?php echo $__env->make('front-end.layouts.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
 
     <!--===== header ==========-->
@@ -77,20 +77,20 @@
             <div class="container">
 
                 <h3 class="breadcrumb-title">
-                    @php
+                    <?php
                         $slugParts = explode('-to-', $slug);
                         // Agar index 1 exist karta hai toh wo le, nahi toh empty string ya default value set karein
                         $to = isset($slugParts[1]) ? $slugParts[1] : 'default-destination'; 
-                    @endphp
+                    ?>
 
-                   {{ ucfirst($to) }} Tour
+                   <?php echo e(ucfirst($to)); ?> Tour
                 </h3>
 
                 <ul class="breadcrumb-menu">
 
                     <li><a href="/">Home</a></li>
 
-                    <li class="active"> {{ ucfirst($to) }}</li>
+                    <li class="active"> <?php echo e(ucfirst($to)); ?></li>
 
                 </ul>
 
@@ -154,16 +154,16 @@
 <div class="service-details">
 <div class="content">
 
-<h3 class="blog-details-title mb-3">Reliable {{ ucwords(str_replace('-', ' ', $slug)) }} Taxi Service – Vrinda Taxi Service</h3>
+<h3 class="blog-details-title mb-3">Reliable <?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> Taxi Service – Vrinda Taxi Service</h3>
 
-<p>Traveling from {{ ucwords(str_replace('-', ' ', $slug)) }} has never been easier and more comfortable than with Vrinda Taxi Service. Whether it's for a family trip, business travel, or a solo journey, our professional taxi services provide a seamless and safe experience for every traveler. Our priority is ensuring that your journey from {{ ucwords(str_replace('-', ' ', $slug)) }} is not only comfortable but also affordable.</p>
+<p>Traveling from <?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> has never been easier and more comfortable than with Vrinda Taxi Service. Whether it's for a family trip, business travel, or a solo journey, our professional taxi services provide a seamless and safe experience for every traveler. Our priority is ensuring that your journey from <?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> is not only comfortable but also affordable.</p>
 
-<h4 class="mb-3">Why Choose Vrinda Taxi Service for {{ ucwords(str_replace('-', ' ', $slug)) }} Taxi</h4>
+<h4 class="mb-3">Why Choose Vrinda Taxi Service for <?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> Taxi</h4>
 
 <p>At Vrinda Taxi Service, we understand the importance of reliable transportation. Our team is committed to providing the best travel experience with:</p>
 
 <ul>
-<li><strong>Professional Drivers:</strong> All our drivers are trained, experienced, and well-acquainted with the routes from {{ ucwords(str_replace('-', ' ', $slug)) }}. They prioritize safety and punctuality.</li>
+<li><strong>Professional Drivers:</strong> All our drivers are trained, experienced, and well-acquainted with the routes from <?php echo e(ucwords(str_replace('-', ' ', $slug))); ?>. They prioritize safety and punctuality.</li>
 <li><strong>Well-Maintained Fleet:</strong> Our cars are regularly serviced, clean, and equipped with modern amenities to ensure a smooth ride.</li>
 <li><strong>Affordable Rates:</strong> We provide transparent pricing with no hidden charges.</li>
 <li><strong>24/7 Customer Support:</strong> Our support team is always available at <strong>+91 9452667708</strong> or via email at <strong>help@vrindataxiservice.com</strong>.</li>
@@ -173,21 +173,21 @@
 
 <p>Traveling long distances can be tiring, but with Vrinda Taxi Service, comfort comes standard. Our cars are spacious, air-conditioned, and well-equipped for long journeys. Whether you are traveling with family, friends, or colleagues, our taxis ensure a pleasant and stress-free journey.</p>
 
-<p>Safety is another key aspect we emphasize. Our vehicles are equipped with safety features, and our drivers follow all traffic regulations strictly. Your peace of mind is our responsibility, and we ensure a safe ride from {{ ucwords(str_replace('-', ' ', $slug)) }}.</p>
+<p>Safety is another key aspect we emphasize. Our vehicles are equipped with safety features, and our drivers follow all traffic regulations strictly. Your peace of mind is our responsibility, and we ensure a safe ride from <?php echo e(ucwords(str_replace('-', ' ', $slug))); ?>.</p>
 
 <h4 class="mt-4">Services We Offer</h4>
 
 <ul>
-<li><strong>{{ ucwords(str_replace('-', ' ', $slug)) }} Taxi:</strong> Ideal for one-way or round trips for sightseeing, business, or personal travel.</li>
+<li><strong><?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> Taxi:</strong> Ideal for one-way or round trips for sightseeing, business, or personal travel.</li>
 <li><strong>Local Tours in Vrindavan:</strong> Explore famous temples, markets, and attractions with our local cab services.</li>
 <li><strong>Airport Transfers:</strong> Reliable taxi service for transfers to Delhi or nearby airports.</li>
 <li><strong>Outstation Travel:</strong> Travel beyond Dehradun to hill stations, pilgrimage destinations, and nearby cities.</li>
 <li><strong>Hourly Rentals:</strong> Flexible taxi rentals to explore destinations at your own pace.</li>
 </ul>
 
-<h4 class="mt-4">Affordable {{ ucwords(str_replace('-', ' ', $slug)) }} Taxi Charges</h4>
+<h4 class="mt-4">Affordable <?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> Taxi Charges</h4>
 
-<p>Our <strong>{{ ucwords(str_replace('-', ' ', $slug)) }} taxi services</strong> are priced competitively to provide value without compromising comfort or safety. Charges depend on the vehicle type, distance, and services selected, but we always maintain transparent pricing with no hidden fees.</p>
+<p>Our <strong><?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> taxi services</strong> are priced competitively to provide value without compromising comfort or safety. Charges depend on the vehicle type, distance, and services selected, but we always maintain transparent pricing with no hidden fees.</p>
 
 <p>You can request a free quote by calling <strong>+91 9452667708</strong> or emailing <strong>help@vrindataxiservice.com</strong>.</p>
 
@@ -200,7 +200,7 @@
 <li><strong>Tempo Travellers and Mini Buses:</strong> Suitable for larger groups and pilgrimage tours.</li>
 </ul>
 
-<h4 class="mt-4">Booking Your {{ ucwords(str_replace('-', ' ', $slug)) }} Taxi</h4>
+<h4 class="mt-4">Booking Your <?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> Taxi</h4>
 
 <p>Booking your taxi with Vrinda Taxi Service is simple and hassle-free. Visit our website <strong>https://vrindataxiservice.com</strong> or call us directly at <strong>+91 9452667708</strong> to book your ride.</p>
 
@@ -208,7 +208,7 @@
 
 <h4 class="mt-4">Customer Satisfaction is Our Priority</h4>
 
-<p>Over the years, Vrinda Taxi Service has built a strong reputation for reliability, comfort, and affordability. Many travelers choose our <strong>{{ ucwords(str_replace('-', ' ', $slug)) }} taxi service</strong> because we provide a travel experience that is safe, convenient, and memorable.</p>
+<p>Over the years, Vrinda Taxi Service has built a strong reputation for reliability, comfort, and affordability. Many travelers choose our <strong><?php echo e(ucwords(str_replace('-', ' ', $slug))); ?> taxi service</strong> because we provide a travel experience that is safe, convenient, and memorable.</p>
 
 <h4 class="mt-4">Explore Dehradun and Beyond</h4>
 
@@ -224,7 +224,7 @@
 <li>Reliable long-distance travel service</li>
 <li>24/7 customer support</li>
 </ul>
-<p>Book your taxi today and enjoy a comfortable journey from <strong>{{ ucwords(str_replace('-', ' ', $slug)) }}</strong> with Vrinda Taxi Service.</p>
+<p>Book your taxi today and enjoy a comfortable journey from <strong><?php echo e(ucwords(str_replace('-', ' ', $slug))); ?></strong> with Vrinda Taxi Service.</p>
 
 </div>
 </div>
@@ -244,7 +244,7 @@
 
 
     <!--======== footer =========-->
-       @include('front-end.layouts.footer')
+       <?php echo $__env->make('front-end.layouts.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
 
     <!--======== footer =========-->
@@ -260,3 +260,4 @@
 
 
 </html>
+<?php /**PATH C:\laragon\www\vrinda-taxi\resources\views/front-end/taxi-service.blade.php ENDPATH**/ ?>

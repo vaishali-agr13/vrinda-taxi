@@ -1,15 +1,15 @@
-  <link rel="icon" type="image/x-icon" href="{{ asset('front-end/assets/img/logo/favicon.png') }}" />
+  <link rel="icon" type="image/x-icon" href="<?php echo e(asset('front-end/assets/img/logo/favicon.png')); ?>" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- css -->
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/all-fontawesome.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/animate.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/magnific-popup.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/owl.carousel.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/slimselect.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/flatpickr.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('front-end/assets/css/style.css') }}" />    
+    <link rel="stylesheet" href="<?php echo e(asset('front-end/assets/css/bootstrap.min.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('front-end/assets/css/all-fontawesome.min.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('front-end/assets/css/animate.min.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('front-end/assets/css/magnific-popup.min.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('front-end/assets/css/owl.carousel.min.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('front-end/assets/css/slimselect.min.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('front-end/assets/css/flatpickr.min.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('front-end/assets/css/style.css')); ?>" />    
     <header class="header header-2">
 
         <!-- header top -->
@@ -118,7 +118,7 @@
 
                     <a class="navbar-brand" href="/">
 
-                        <img src="{{ asset('front-end/assets/img/logo/logo.png') }}" alt="logo" />
+                        <img src="<?php echo e(asset('front-end/assets/img/logo/logo.png')); ?>" alt="logo" />
 
                     </a>
 
@@ -148,7 +148,7 @@
 
                             <a href="/" class="offcanvas-brand" id="offcanvasNavbarLabel">
 
-                                <img src="{{ asset('front-end/assets/img/logo/logo.png') }}" alt="" />
+                                <img src="<?php echo e(asset('front-end/assets/img/logo/logo.png')); ?>" alt="" />
 
                             </a>
 
@@ -254,13 +254,14 @@
                                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tour Package</a>
 
                                     <ul class="dropdown-menu fade-down">
-                                       @foreach($tourPackages as $tour)
+                                       <?php $__currentLoopData = $tourPackages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tour): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <li>
-                                                <a class="dropdown-item" href="{{ route('tour-packages.show', $tour->id) }}">
-                                                    {{ $tour->location }}
+                                                <a class="dropdown-item" href="<?php echo e(route('tour-packages.show', $tour->id)); ?>">
+                                                    <?php echo e($tour->location); ?>
+
                                                 </a>
                                             </li>
-                                        @endforeach
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                                         <!-- <li><a class="dropdown-item" href="vrindavan.php">Vrindavan</a></li>
 
@@ -311,17 +312,17 @@
     </a>
     <ul class="dropdown-menu shadow-sm" aria-labelledby="servicesDropdown">
         <li>
-            <a class="dropdown-item py-2" href="{{ url('/airport-taxi') }}">
+            <a class="dropdown-item py-2" href="<?php echo e(url('/airport-taxi')); ?>">
                 <i class="fa-solid fa-plane-departure me-2 text-secondary"></i> Airport Taxi
             </a>
         </li>
         <li>
-            <a class="dropdown-item py-2" href="{{ url('/outstation-taxi') }}">
+            <a class="dropdown-item py-2" href="<?php echo e(url('/outstation-taxi')); ?>">
                 <i class="fa-solid fa-car-side me-2 text-secondary"></i> Outstation Taxi
             </a>
         </li>
         <li>
-            <a class="dropdown-item py-2" href="{{ url('/vrindavan-sightseeing') }}">
+            <a class="dropdown-item py-2" href="<?php echo e(url('/vrindavan-sightseeing')); ?>">
                 <i class="fa-solid fa-monument me-2 text-secondary"></i> Sightseeing
             </a>
         </li>
@@ -417,7 +418,7 @@
 
             <a href="/" class="sidebar-popup-logo">
 
-                <img src="{{ asset('front-end/assets/img/logo/logo.png') }}" alt="" />
+                <img src="<?php echo e(asset('front-end/assets/img/logo/logo.png')); ?>" alt="" />
 
             </a>
 
@@ -530,3 +531,4 @@
     </div>
 
     <!-- sidebar-popup end -->
+<?php /**PATH C:\laragon\www\vrinda-taxi\resources\views/front-end/layouts/header.blade.php ENDPATH**/ ?>

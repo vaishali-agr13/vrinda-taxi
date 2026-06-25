@@ -13,6 +13,12 @@ use App\Http\Controllers\TourManagementController;
 
 
 Route::get('/about', function () {return view('front-end.about'); })->name('about');
+Route::get('/contact', function () {return view('front-end.contact'); })->name('contact');
+
+Route::get('/airport-taxi', function () {return view('front-end.airport-taxi'); });
+Route::get('/outstation-taxi', function () {return view('front-end.outstation-taxi'); });
+Route::get('/vrindavan-sightseeing', function () {return view('front-end.vrindavan-sightseeing'); });
+
 Route::get('/package', function () {return view('front-end.package'); })->name('package');
 Route::get('/vrindavan-to-rishikesh-taxi-service', function () {return view('front-end.vrindavan-to-rishikesh-taxi-service'); });
 
